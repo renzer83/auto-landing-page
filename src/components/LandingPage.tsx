@@ -24,6 +24,7 @@ import { FloatingCTASection } from './sections/FloatingCTASection';
 import { FloatingNotifications } from './sections/FloatingNotifications';
 import { WhatsAppButton } from './sections/WhatsAppButton';
 import { ExitIntentPopup } from './sections/ExitIntentPopup';
+import { FooterSection } from './sections/FooterSection';
 import { LandingPageData, Section } from '../types/landing';
 import { Loader2 } from 'lucide-react';
 import { loadTemplate } from '../utils/templateLoader';
@@ -184,6 +185,13 @@ export const LandingPage: React.FC = () => {
             hoursToAdd={data.countdown.hoursToAdd}
           />
         );
+      case 'footer':
+        return (
+          <FooterSection
+            data={data.footer}
+            colors={data.colors}
+          />
+        );
       default:
         return null;
     }
@@ -216,7 +224,7 @@ export const LandingPage: React.FC = () => {
       <FloatingNotifications position="bottom-left" />
       
       {/* Botão do WhatsApp */}
-      <WhatsAppButton phoneNumber="+5511999999999" position="bottom-right" />
+      {/* <WhatsAppButton phoneNumber="+5511999999999" position="bottom-right" /> */}
       
       {/* Popup de Saída */}
       <ExitIntentPopup discountCode="POWERPET30" />

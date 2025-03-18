@@ -1,3 +1,27 @@
+export interface FooterSettings {
+  companyName?: string;
+  logo?: string;
+  links?: {
+    title: string;
+    url: string;
+  }[];
+  socialLinks?: {
+    icon: string;
+    url: string;
+  }[];
+  copyright?: string;
+  disclaimer?: string;
+  backgroundColor?: string;
+  textColor?: string;
+  columns?: FooterColumn[];
+}
+
+export interface FooterColumn {
+  title: string;
+  links: {
+    text: string;
+    url: string;
+  }[];
 export interface LandingPageData {
   title: string;
   subtitle?: string;
@@ -13,6 +37,7 @@ export interface LandingPageData {
   socialProof?: SocialProofItem[];
   beforeAfter?: BeforeAfterItem[];
   countdown?: CountdownSettings;
+  footer?: FooterSettings;
   colors: {
     primary: string;
     secondary: string;
@@ -127,7 +152,7 @@ export interface Section {
   type: 'text' | 'image' | 'button' | 'hero' | 'stats' | 'features' | 'pricing' | 
         'team' | 'testimonials' | 'newsletter' | 'contact' | 'bonuses' | 'faqs' | 
         'video' | 'html' | 'guarantee' | 'checkout' | 'social-proof' | 'before-after' | 
-        'countdown';
+        'countdown' | 'footer';
   content?: string;
   url?: string;
   alt?: string;

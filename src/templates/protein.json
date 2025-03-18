@@ -19,6 +19,85 @@
     { "label": "Happy Customers", "value": "50K+", "icon": "users" },
     { "label": "Countries Served", "value": "30+", "icon": "globe" }
   ],
+  "footer": {
+    "companyName": "Premium Plant Protein",
+    "logo": "https://images.unsplash.com/photo-1593095948071-474c5cc2989d?w=200",
+    "copyright": "© 2025 Premium Plant Protein. All rights reserved.",
+    "disclaimer": "The statements on this website have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.",
+    "backgroundColor": "#059669",
+    "textColor": "#FFFFFF",
+    "socialLinks": [
+      {
+        "icon": "https://api.iconify.design/lucide:instagram.svg",
+        "url": "https://instagram.com/premiumplantprotein"
+      },
+      {
+        "icon": "https://api.iconify.design/lucide:twitter.svg",
+        "url": "https://twitter.com/plantprotein"
+      },
+      {
+        "icon": "https://api.iconify.design/lucide:linkedin.svg",
+        "url": "https://linkedin.com/company/premium-plant-protein"
+      }
+    ],
+    "columns": [
+      {
+        "title": "Products",
+        "links": [
+          {
+            "text": "All Products",
+            "url": "#products"
+          },
+          {
+            "text": "New Arrivals",
+            "url": "#new"
+          },
+          {
+            "text": "Best Sellers",
+            "url": "#best-sellers"
+          }
+        ]
+      },
+      {
+        "title": "About Us",
+        "links": [
+          {
+            "text": "Our Story",
+            "url": "#story"
+          },
+          {
+            "text": "Blog",
+            "url": "#blog"
+          },
+          {
+            "text": "Press",
+            "url": "#press"
+          }
+        ]
+      },
+      {
+        "title": "Support",
+        "links": [
+          {
+            "text": "Contact Us",
+            "url": "#contact"
+          },
+          {
+            "text": "FAQ",
+            "url": "#faq"
+          },
+          {
+            "text": "Shipping & Returns",
+            "url": "#shipping"
+          },
+          {
+            "text": "Privacy Policy",
+            "url": "#privacy"
+          }
+        ]
+      }
+    ]
+  },
   "features": [
     {
       "icon": "https://api.iconify.design/lucide:leaf.svg",
@@ -150,6 +229,9 @@
       "type": "button",
       "text": "Shop Now",
       "link": "https://example.com/shop"
+    },
+    {
+      "type": "footer"
     }
   ]
 }

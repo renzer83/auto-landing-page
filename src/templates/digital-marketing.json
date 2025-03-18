@@ -19,6 +19,36 @@
     { "label": "Students Enrolled", "value": "25K+", "icon": "users" },
     { "label": "Success Rate", "value": "94%", "icon": "trending-up" }
   ],
+  "footer": {
+    "companyName": "Digital Marketing Academy",
+    "copyright": "© 2025 Digital Marketing Academy. All rights reserved.",
+    "backgroundColor": "#0F172A",
+    "textColor": "#3B82F6",
+    "socialLinks": [
+      {
+        "icon": "https://api.iconify.design/lucide:instagram.svg",
+        "url": "https://instagram.com/digitalmarketing"
+      },
+      {
+        "icon": "https://api.iconify.design/lucide:facebook.svg",
+        "url": "https://facebook.com/digitalmarketing"
+      }
+    ],
+    "links": [
+      {
+        "title": "Terms",
+        "url": "#terms"
+      },
+      {
+        "title": "Privacy",
+        "url": "#privacy"
+      },
+      {
+        "title": "Contact",
+        "url": "#contact"
+      }
+    ]
+  },
   "features": [
     {
       "icon": "https://api.iconify.design/lucide:search.svg",
@@ -145,6 +175,9 @@
       "type": "button",
       "text": "Enroll Now",
       "link": "https://example.com/enroll"
+    },
+    {
+      "type": "footer"
     }
   ]
 }

@@ -196,6 +196,28 @@
     "title": "ESTA OFERTA ACABA EM:",
     "hoursToAdd": 24
   },
+  "footer": {
+    "companyName": "Power Pet",
+    "logo": "https://api.finditbuy.com/api/images/pub?filename=powerpet/logo-power-pet-Recuperado-2-png-300x300-2.png",
+    "copyright": "© 2025 Power Pet. Todos os direitos reservados.",
+    "disclaimer": "Este site não faz parte do site do Facebook ou Facebook Inc. Além disso, este site NÃO é endossado pelo Facebook de forma alguma. FACEBOOK é uma marca registrada da FACEBOOK, Inc.",
+    "backgroundColor": "#000000",
+    "textColor": "#FFFFFF",
+    "socialLinks": [
+      {
+        "icon": "https://api.iconify.design/lucide:instagram.svg",
+        "url": "https://instagram.com/powerpet"
+      },
+      {
+        "icon": "https://api.iconify.design/lucide:facebook.svg",
+        "url": "https://facebook.com/powerpet"
+      },
+      {
+        "icon": "https://api.iconify.design/lucide:youtube.svg",
+        "url": "https://youtube.com/powerpet"
+      }
+    ]
+  },
   "sections": [
     { 
       "type": "hero" 
@@ -283,6 +305,9 @@
     { 
       "type": "faqs",
       "text": "PERGUNTAS FREQUENTES"
+    },
+    {
+      "type": "footer"
     }
   ]
 }
