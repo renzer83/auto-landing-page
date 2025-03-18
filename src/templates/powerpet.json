@@ -2,7 +2,7 @@
   "title": "Power Pet - Receitas para Pets",
   "subtitle": "Aprenda como faturar até 6 mil reais por mês com deliciosas receitas de biscoitos caseiros para pets",
   "hero": {
-    "backgroundImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa",
+    "backgroundImage": "https://api.finditbuy.com/api/images/pub?filename=powerpet/Bannerprincipalpowerpet.jpeg",
     "title": "APRENDA COMO FATURAR ATÉ 6 MIL REAIS POR MÊS COM DELICIOSAS RECEITAS DE BISCOITOS CASEIROS PARA PETS",
     "subtitle": "Você sabia que o mercado de pets cresceu 75% somente neste ano? A procura por diferentes formas de prolongar ainda mais a vida dos bichinhos virou uma febre.",
     "logo": "https://api.finditbuy.com/api/images/pub?filename=powerpet/logo-power-pet-Recuperado-2-png-300x300-2.png",
@@ -265,8 +265,13 @@
     },
     { 
       "type": "checkout",
+      "originalPrice": 147,
+      "price": 97,
       "text": "🐾 QUERO ADQUIRIR AGORA MESMO! 🐾",
-      "link": "http://mon.net.br/276gh6?src=Allan"
+      "link": "http://mon.net.br/276gh6?src=Allan",
+      "installments": "ou até 12x de R$8,08 no cartão de crédito",
+      "paymentMethods": ["Cartão de crédito", "Boleto", "Pix"],
+      "securityBadgeUrl": "https://digitalmarketplaceworld.shop/wp-content/uploads/2023/12/Checkout-Seguro-1.png"
     },
     { 
       "type": "guarantee",

@@ -127,6 +127,16 @@
       "content": "Our comprehensive digital marketing course is designed by industry professionals with decades of experience. Whether you're a beginner or seasoned marketer, this course will equip you with cutting-edge strategies to dominate the digital landscape."
     },
     { "type": "pricing" },
+    {
+      "type": "checkout",
+      "originalPrice": 699,
+      "price": 499,
+      "text": "SECURE MY SPOT NOW",
+      "link": "#enroll",
+      "installments": "or 12x of $41.58 with no interest",
+      "paymentMethods": ["Credit Card", "PayPal", "Bank Transfer"],
+      "securityBadgeUrl": "https://example.com/secure-badge.png"
+    },
     { "type": "testimonials" },
     { "type": "team" },
     { "type": "newsletter" },

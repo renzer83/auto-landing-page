@@ -127,6 +127,16 @@
       "content": "Our premium plant-based protein is crafted from the finest organic ingredients, delivering optimal nutrition for your active lifestyle. Each serving packs 25g of complete protein, essential amino acids, and natural nutrients to support your fitness journey."
     },
     { "type": "pricing" },
+    {
+      "type": "checkout",
+      "originalPrice": 59.99,
+      "price": 39.99,
+      "text": "ORDER NOW AND SAVE 33%",
+      "link": "https://example.com/checkout",
+      "installments": "or 4 payments of $9.99 with Afterpay",
+      "paymentMethods": ["Credit Card", "PayPal", "Apple Pay", "Google Pay"],
+      "securityBadgeUrl": "https://example.com/secure-checkout.png"
+    },
     { "type": "team" },
     { "type": "testimonials" },
     { "type": "newsletter" },

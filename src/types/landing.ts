@@ -139,4 +139,11 @@ export interface Section {
   textColor?: string;
   borderColor?: string;
   title?: string;
+  
+  // Propriedades para checkout
+  originalPrice?: number;
+  price?: number;
+  installments?: string;
+  paymentMethods?: string[];
+  securityBadgeUrl?: string;
 }

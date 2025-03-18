@@ -11,16 +11,31 @@ interface CheckoutSectionProps {
   securityBadgeUrl?: string;
 }
 
-export const CheckoutSection: React.FC<CheckoutSectionProps> = ({
-  productName,
-  originalPrice,
-  price,
-  buttonText,
-  buttonLink,
-  paymentMethods = ["Cartão de crédito", "Boleto", "Pix"],
-  installments,
-  securityBadgeUrl = "https://digitalmarketplaceworld.shop/wp-content/uploads/2023/12/Checkout-Seguro-1.png"
-}) => {
+// Template para a seção de checkout
+export const checkoutTemplate = {
+  productName: "{{productName}}", // Será preenchido dinamicamente
+  originalPrice: null, // Opcional, preço original para mostrar desconto
+  price: "{{price}}", // Preço do produto (será substituído, ex: 27.00)
+  buttonText: "{{buttonText}}", // Texto do botão (será substituído, ex: "COMPRAR AGORA")
+  buttonLink: "{{buttonLink}}", // Link do botão (será substituído, ex: "#")
+  installments: "{{installments}}", // Texto de parcelamento (será substituído)
+  paymentMethods: ["Cartão de crédito", "Boleto", "Pix"], // Métodos de pagamento
+  securityBadgeUrl: "https://digitalmarketplaceworld.shop/wp-content/uploads/2023/12/Checkout-Seguro-1.png" // Badge de segurança
+};
+
+export const CheckoutSection: React.FC<CheckoutSectionProps> = (props) => {
+  // Usar valores do template para campos não definidos
+  const {
+    productName,
+    originalPrice = checkoutTemplate.originalPrice,
+    price = (checkoutTemplate.price && checkoutTemplate.price !== "{{price}}") ? Number(checkoutTemplate.price) : 27.00,
+    buttonText = (checkoutTemplate.buttonText && checkoutTemplate.buttonText !== "{{buttonText}}") ? checkoutTemplate.buttonText : "COMPRAR AGORA",
+    buttonLink = (checkoutTemplate.buttonLink && checkoutTemplate.buttonLink !== "{{buttonLink}}") ? checkoutTemplate.buttonLink : "#",
+    paymentMethods = checkoutTemplate.paymentMethods,
+    installments = (checkoutTemplate.installments && checkoutTemplate.installments !== "{{installments}}") ? 
+      checkoutTemplate.installments : `ou até 3x de ${(price / 3).toFixed(2)} no cartão de crédito`,
+    securityBadgeUrl = checkoutTemplate.securityBadgeUrl
+  } = props;
   return (
     <section className="py-16 bg-black" id="compra">
       <div className="container mx-auto px-4">

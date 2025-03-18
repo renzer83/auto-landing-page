@@ -152,10 +152,13 @@ export const LandingPage: React.FC = () => {
         return (
           <CheckoutSection 
             productName={data.title}
-            price={27.00}
+            price={section.price || 27.00}
+            originalPrice={section.originalPrice}
             buttonText={section.text || "COMPRAR AGORA"}
             buttonLink={section.link || "#"}
-            installments="ou até 3x de 9,54 no cartão de crédito"
+            installments={section.installments || `ou até 3x de ${((section.price || 27.00) / 3).toFixed(2)} no cartão de crédito`}
+            paymentMethods={section.paymentMethods}
+            securityBadgeUrl={section.securityBadgeUrl}
           />
         );
       case 'social-proof':
