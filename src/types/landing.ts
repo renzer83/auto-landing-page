@@ -146,4 +146,8 @@ export interface Section {
   installments?: string;
   paymentMethods?: string[];
   securityBadgeUrl?: string;
+  
+  // Propriedades para guarantee
+  days?: number;
+  guaranteeImage?: string;
 }

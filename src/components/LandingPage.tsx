@@ -143,9 +143,10 @@ export const LandingPage: React.FC = () => {
       case 'guarantee':
         return (
           <GuaranteeSection 
-            days={7} 
+            days={section.days} 
             title={section.title || section.text || "Nossa Garantia"}
             description={section.content}
+            image={section.guaranteeImage}
           />
         );
       case 'checkout':

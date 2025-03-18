@@ -169,7 +169,7 @@
     },
     {
       "before": {
-        "image": "https://images.unsplash.com/photo-1617640975331-3ce9fb7a6310",
+        "image": "https://api.finditbuy.com/api/images/pub?filename=powerpet/pexels-pixabay-210600.jpg",
         "title": "Sem Fonte de Renda Extra",
         "description": "Dificuldades financeiras e sem perspectiva de renda adicional"
       },
@@ -181,7 +181,7 @@
     },
     {
       "before": {
-        "image": "https://images.unsplash.com/photo-1517314207346-cc51165d21f4",
+        "image": "https://api.finditbuy.com/api/images/pub?filename=powerpet/pexels-dina-nasyrova-2006209-7421920.jpg",
         "title": "Pet com Problemas de Saúde",
         "description": "Animais com dieta inadequada podem desenvolver problemas de pele, obesidade e baixa energia"
       },
@@ -271,12 +271,14 @@
       "link": "http://mon.net.br/276gh6?src=Allan",
       "installments": "ou até 12x de R$8,08 no cartão de crédito",
       "paymentMethods": ["Cartão de crédito", "Boleto", "Pix"],
-      "securityBadgeUrl": "https://digitalmarketplaceworld.shop/wp-content/uploads/2023/12/Checkout-Seguro-1.png"
+      "securityBadgeUrl": "https://api.finditbuy.com/api/images/pub?filename=powerpet/compra-segura-2-300x28-1.webp"
     },
     { 
       "type": "guarantee",
-      "text": "NÓS ASSUMIMOS OS RISCOS!",
-      "content": "Caso você não aprove o conteúdo do e-book, nós iremos devolver todo o seu dinheiro. Você terá 7 dias de garantia para testar e aprovar o conteúdo. Porém, estamos convictos que não será necessário, pois sabemos de toda a transformação que as receitinhas podem trazer para a sua vida como empreendedor e para a vida dos pets."
+      "text": "NÓSddd ASSUMIMOS OS RISCOS!",
+      "content": "Caso você não aprove o conteúdo do e-book, nós iremos devolver todo o seu dinheiro. Você terá 7 dias de garantia para testar e aprovar o conteúdo. Porém, estamos convictos que não será necessário, pois sabemos de toda a transformação que as receitinhas podem trazer para a sua vida como empreendedor e para a vida dos pets.",
+      "days": 7,
+      "guaranteeImage": "https://api.finditbuy.com/api/images/pub?filename=powerpet/Selo-de-Garantia-de-7-Dias-PNG-Transparente-Sem-Fundo-768x769.png.webp"
     },
     { 
       "type": "faqs",

@@ -1,14 +1,14 @@
 import React from 'react';
 
 interface GuaranteeSectionProps {
-  days: number;
+  days?: number;
   title?: string;
   description?: string;
   image?: string;
 }
 
 export const GuaranteeSection: React.FC<GuaranteeSectionProps> = ({ 
-  days, 
+  days = 7, 
   title = "Garantia de Satisfação", 
   description = "Se você não ficar satisfeito, devolvemos seu dinheiro. Sem perguntas.",
   image = "https://digitalmarketplaceworld.shop/wp-content/uploads/2023/12/Selo-de-Garantia-de-7-Dias-PNG-Transparente-Sem-Fundo-1024x1024-1.webp"

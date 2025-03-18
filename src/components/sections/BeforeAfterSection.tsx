@@ -20,18 +20,18 @@ interface BeforeAfterSectionProps {
 
 export const BeforeAfterSection: React.FC<BeforeAfterSectionProps> = ({ title, items }) => {
   return (
-    <section className="py-16 bg-gray-900">
+    <section className="py-24 bg-gray-900">
       <div className="container mx-auto px-4">
         {title && (
-          <h2 className="text-3xl font-bold text-center text-primary mb-12">{title}</h2>
+          <h2 className="text-4xl font-bold text-center text-primary mb-16 relative pb-4 after:content-[''] after:absolute after:w-24 after:h-1 after:bg-primary after:bottom-0 after:left-1/2 after:-translate-x-1/2">{title}</h2>
         )}
         
         <div className="space-y-24">
           {items.map((item, index) => (
-            <div key={index} className="flex flex-col md:flex-row gap-6 transform hover:translate-y-[-5px] transition-all duration-500 relative">
+            <div key={index} className="flex flex-col md:flex-row gap-8 transform hover:translate-y-[-5px] transition-all duration-500 relative mb-16">
               {/* Título para toda a comparação */}
               <h3 className="text-xl font-semibold text-primary absolute -top-8 left-0 md:left-1/2 md:transform md:-translate-x-1/2">
-                Transformação #{index + 1}
+                {/* Transformação #{index + 1} */}
               </h3>
               {/* Ícone de seta entre blocos (visível apenas em desktop) */}
               <div className="hidden md:flex absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 bg-black rounded-full p-2 shadow-lg shadow-primary/30 border border-primary/50">
@@ -41,19 +41,19 @@ export const BeforeAfterSection: React.FC<BeforeAfterSectionProps> = ({ title, i
                 </svg>
               </div>
               {/* Antes */}
-              <div className="flex-1 bg-black rounded-3xl p-6 md:mr-8 mb-8 md:mb-0 border border-red-500/30 shadow-lg shadow-red-500/20 hover:shadow-red-500/30 transition-all duration-300">
+              <div className="flex-1 bg-black rounded-3xl p-8 md:mr-10 mb-8 md:mb-0 border border-red-500/30 shadow-lg shadow-red-500/20 hover:shadow-red-500/30 transition-all duration-300">
                 <div className="flex justify-center mb-6">
                   <div className="relative">
                     <img
                       src={item.before.image}
                       alt={`Antes: ${item.before.title}`}
-                      className="rounded-xl w-full h-64 object-cover transition-opacity duration-300 hover:opacity-90 border-2 border-red-500/30"
+                      className="rounded-xl w-full h-96 object-cover transition-all duration-300 hover:opacity-90 border-2 border-red-500/50 shadow-lg shadow-red-500/30"
                       onError={(e) => {
                         // Fallback para imagem genérica em caso de erro
                         e.currentTarget.src = 'https://images.unsplash.com/photo-1572883475077-c8d84b7e2241';
                       }}
                     />
-                    <div className="absolute top-4 left-4 bg-red-600 text-white px-4 py-1 rounded-full">
+                    <div className="absolute top-4 left-4 bg-red-600 text-white px-5 py-2 rounded-full font-bold shadow-lg text-lg transform -rotate-3">
                       ANTES
                     </div>
                   </div>
@@ -67,19 +67,19 @@ export const BeforeAfterSection: React.FC<BeforeAfterSectionProps> = ({ title, i
               </div>
               
               {/* Depois */}
-              <div className="flex-1 bg-black rounded-3xl p-6 md:ml-8 border border-primary/30 shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all duration-300 transform hover:scale-[1.01]">
+              <div className="flex-1 bg-black rounded-3xl p-8 md:ml-10 border border-primary/30 shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all duration-300 transform hover:scale-[1.02]">
                 <div className="flex justify-center mb-6">
                   <div className="relative">
                     <img
                       src={item.after.image}
                       alt={`Depois: ${item.after.title}`}
-                      className="rounded-xl w-full h-64 object-cover transition-opacity duration-300 hover:opacity-90 border-2 border-primary/30"
+                      className="rounded-xl w-full h-96 object-cover transition-all duration-300 hover:opacity-90 border-2 border-primary/50 shadow-lg shadow-primary/30"
                       onError={(e) => {
                         // Fallback para imagem genérica em caso de erro
                         e.currentTarget.src = 'https://images.unsplash.com/photo-1566847438217-76e82d383f84';
                       }}
                     />
-                    <div className="absolute top-4 right-4 bg-primary text-black px-4 py-1 rounded-full">
+                    <div className="absolute top-4 right-4 bg-primary text-black px-5 py-2 rounded-full font-bold shadow-lg text-lg transform rotate-3">
                       DEPOIS
                     </div>
                   </div>

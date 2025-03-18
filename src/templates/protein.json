@@ -127,8 +127,7 @@
       "content": "Our premium plant-based protein is crafted from the finest organic ingredients, delivering optimal nutrition for your active lifestyle. Each serving packs 25g of complete protein, essential amino acids, and natural nutrients to support your fitness journey."
     },
     { "type": "pricing" },
-    {
-      "type": "checkout",
+    { "type": "checkout",
       "originalPrice": 59.99,
       "price": 39.99,
       "text": "ORDER NOW AND SAVE 33%",
@@ -136,6 +135,12 @@
       "installments": "or 4 payments of $9.99 with Afterpay",
       "paymentMethods": ["Credit Card", "PayPal", "Apple Pay", "Google Pay"],
       "securityBadgeUrl": "https://example.com/secure-checkout.png"
+    },
+    { "type": "guarantee",
+      "text": "OUR SATISFACTION GUARANTEE",
+      "content": "If you're not completely satisfied with our plant-based protein, we'll refund your purchase. No questions asked. That's how confident we are in the quality of our product.",
+      "days": 30,
+      "guaranteeImage": "https://digitalmarketplaceworld.shop/wp-content/uploads/2023/12/Selo-de-Garantia-de-30-Dias-PNG-Transparente-Sem-Fundo-1024x1024-1.webp"
     },
     { "type": "team" },
     { "type": "testimonials" },
