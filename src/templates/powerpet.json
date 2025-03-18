@@ -1,0 +1,281 @@
+{
+  "title": "Power Pet - Receitas para Pets",
+  "subtitle": "Aprenda como faturar até 6 mil reais por mês com deliciosas receitas de biscoitos caseiros para pets",
+  "hero": {
+    "backgroundImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa",
+    "title": "APRENDA COMO FATURAR ATÉ 6 MIL REAIS POR MÊS COM DELICIOSAS RECEITAS DE BISCOITOS CASEIROS PARA PETS",
+    "subtitle": "Você sabia que o mercado de pets cresceu 75% somente neste ano? A procura por diferentes formas de prolongar ainda mais a vida dos bichinhos virou uma febre.",
+    "logo": "https://api.finditbuy.com/api/images/pub?filename=powerpet/logo-power-pet-Recuperado-2-png-300x300-2.png",
+    "buttonText": "🐾 EU QUERO APRENDER! 🐾",
+    "buttonLink": "#compra"
+  },
+  "colors": {
+    "primary": "#00FFC6",
+    "secondary": "#111111",
+    "accent": "#FFFD00",
+    "background": "#000000"
+  },
+  "features": [
+    {
+      "icon": "https://api.iconify.design/lucide:cookie.svg",
+      "title": "Receitas de Petiscos para pets",
+      "description": "Receitas de Petiscos para Pets - Aprenda receitas passo a passo, fáceis de fazer e muito deliciosas, mesmo que você não entenda nada de cozinha ou de pets.",
+      "image": "https://api.finditbuy.com/api/images/pub?filename=powerpet/cap-petiscos-240x300-3.png"
+    },
+    {
+      "icon": "https://api.iconify.design/lucide:cat.svg",
+      "title": "Petiscos para seu Gato",
+      "description": "Como mimar seu Gato com petiscos caseiros - Você vai aprender, do início ao fim, como produzir petiscos maravilhosos, mesmo que nunca tenha feito na vida. Seu gato vai amar!",
+      "image": "https://api.finditbuy.com/api/images/pub?filename=powerpet/b-1-gato-mimado-240x300-4.png"
+    },
+    {
+      "icon": "https://api.iconify.design/lucide:alert-triangle.svg",
+      "title": "Alimentos e medicamentos proibidos",
+      "description": "Alimentos e Medicamentos Proibidos - Descubra quais são os ingredientes e medicamentos que podem afetar a vida dos pets e gerar graves doenças.",
+      "image": "https://api.finditbuy.com/api/images/pub?filename=powerpet/cap-proibidos-1-240x300-5.png"
+    },
+    {
+      "icon": "https://api.iconify.design/lucide:heart-pulse.svg",
+      "title": "A importância da alimentação saudável para pet",
+      "description": "Importância de uma Alimentação Saudável - Vamos te ensinar como prolongar ainda mais a vida dos bichinhos com uma alimentação rica e equilibrada.",
+      "image": "https://api.finditbuy.com/api/images/pub?filename=powerpet/cap-saudavel-240x300-6.png"
+    },
+    {
+      "icon": "https://api.iconify.design/lucide:chef-hat.svg",
+      "title": "Alimentos Caseiros para animais",
+      "description": "Receitas de Alimentos Caseiros para Pets - Aprenda tudo que é necessário para produzir alimentos caseiros para pets e começar a vender, mesmo que você não entenda nada disso.",
+      "image": "https://api.finditbuy.com/api/images/pub?filename=powerpet/cap-alimentos-caseiro-240x300-7.png"
+    },
+    {
+      "icon": "https://api.iconify.design/lucide:briefcase.svg",
+      "title": "Kit Empreendedor de Sucesso",
+      "description": "Kit Empreendedor de Sucesso - Vamos te mostrar como e onde você deverá vender suas receitas para começar a faturar alto sem precisar sair de casa.",
+      "image": "https://api.finditbuy.com/api/images/pub?filename=powerpet/cap-kit-empreendedor-240x300-8.png"
+    }
+  ],
+  "testimonials": [
+    {
+      "image": "https://api.finditbuy.com/api/images/pub?filename=powerpet/prava-4-pet-150x300-10.png",
+      "quote": "Os petiscos são simplesmente maravilhosos! Meu cachorro adora e são super saudáveis!",
+      "author": "Maria Silva",
+      "role": "Cliente satisfeita",
+      "avatar": "https://api.finditbuy.com/api/images/pub?filename=powerpet/prava-4-pet-150x300-10.png"
+    },
+    {
+      "image": "https://api.finditbuy.com/api/images/pub?filename=powerpet/prova-3-pet-150x300-12.png",
+      "quote": "Comecei a vender os petiscos há 2 meses e já estou faturando mais de R$3.000 por mês!",
+      "author": "João Oliveira",
+      "role": "Empreendedor",
+      "avatar": "https://api.finditbuy.com/api/images/pub?filename=powerpet/prova-3-pet-150x300-12.png"
+    },
+    {
+      "image": "https://api.finditbuy.com/api/images/pub?filename=powerpet/prova-1-pet-150x300-13.png",
+      "quote": "As receitas são super fáceis de fazer e meu gato simplesmente adora!",
+      "author": "Ana Paula",
+      "role": "Tutora de gatos",
+      "avatar": "https://api.finditbuy.com/api/images/pub?filename=powerpet/prova-1-pet-150x300-13.png"
+    },
+    {
+      "image": "https://api.finditbuy.com/api/images/pub?filename=powerpet/prava-2-pet-150x300-11.png",
+      "quote": "Transformei minha paixão por animais em um negócio lucrativo. Obrigada Power Pet!",
+      "author": "Carla Mendes",
+      "role": "Empreendedora",
+      "avatar": "https://api.finditbuy.com/api/images/pub?filename=powerpet/prava-2-pet-150x300-11.png"
+    }
+  ],
+  "videos": [
+    {
+      "url": "https://www.youtube.com/watch?v=9ugwELfrz8s",
+      "title": "Vídeo de apresentação",
+      "description": "Veja como é fácil preparar receitas para pets"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=HEyJ1ONNOwI",
+      "title": "Reportagem sobre mercado pet",
+      "description": "Veja como o mercado está crescendo"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=4dSGdcVXJBo",
+      "title": "Depoimentos de clientes",
+      "description": "Veja o que os clientes dizem sobre as receitas"
+    }
+  ],
+  "bonuses": [
+    {
+      "title": "Cuidados com o cão para iniciantes",
+      "description": "Cuidado Com o Cão para Iniciantes - Ser tutor de primeira viagem nem sempre é uma tarefa fácil. Pensando nisso, montamos um manual com os principais cuidados que você deve ter.",
+      "image": "https://api.finditbuy.com/api/images/pub?filename=powerpet/b-1-pet-240x300-17.png",
+      "originalPrice": 97.00,
+      "currentPrice": 0.00
+    },
+    {
+      "title": "Saúde do cão exposta",
+      "description": "Saúde do Cão Exposta - Aprenda os principais cuidados que você deve ter com o seu cão para que ele seja um animal sempre saudável e com longa vida.",
+      "image": "https://api.finditbuy.com/api/images/pub?filename=powerpet/b-2-pet-240x300-18.png",
+      "originalPrice": 147.00,
+      "currentPrice": 0.00
+    },
+    {
+      "title": "Treinamento básico de cães",
+      "description": "Treinamento Básico de Cães - Você irá aprender a maneira mais fácil de adestrar seu cãozinho, mesmo que você não entenda nada disso.",
+      "image": "https://api.finditbuy.com/api/images/pub?filename=powerpet/b-3-pet-240x300-19.png",
+      "originalPrice": 97.00,
+      "currentPrice": 0.00
+    },
+    {
+      "title": "Como treinar o seu gato",
+      "description": "Como Treinar o Seu Gato - Vamos te mostrar que é possível, sim, treinar o seu gatinho de uma maneira muito simples e rápida.",
+      "image": "https://api.finditbuy.com/api/images/pub?filename=powerpet/b-4-pet-240x300-20.png",
+      "originalPrice": 97.00,
+      "currentPrice": 0.00
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Após a compra, como faço para acessar o conteúdo?",
+      "answer": "Imediatamente depois de efetuar o pagamento, você receberá no seu e-mail todas as instruções de acesso. É bem fácil!"
+    },
+    {
+      "question": "Eu vou ter alguma garantia?",
+      "answer": "Lógico que sim. Nós assumimos todos os riscos, pois sabemos da qualidade do nosso produto. Se ainda assim você quiser todo o seu dinheiro de volta, poderá solicitar dentro dos primeiros 7 dias após o pagamento."
+    },
+    {
+      "question": "Não entendo nada (ou quase nada) de cozinha. Vou conseguir fazer as receitas?",
+      "answer": "Com toda a certeza. Nossas receitas são super fáceis e brindamos todo o passo a passo para a realização das mesmas."
+    },
+    {
+      "question": "Eu vou ter acesso ao curso por quanto tempo?",
+      "answer": "Depois de comprar, o curso será seu por tempo indeterminado."
+    }
+  ],
+  "socialProof": [
+    { "icon": "users", "value": "12.000+", "label": "Clientes Satisfeitos" },
+    { "icon": "shopping-bag", "value": "30.000+", "label": "Produtos Vendidos" },
+    { "icon": "award", "value": "97%", "label": "Taxa de Satisfação" },
+    { "icon": "thumbs-up", "value": "4.8/5", "label": "Avaliação Média" }
+  ],
+  "beforeAfter": [
+    {
+      "before": {
+        "image": "https://images.unsplash.com/photo-1611224885990-ab7363d1f2a9",
+        "title": "Alimentação Industrial",
+        "description": "Pets com dieta baseada em produtos industrializados podem desenvolver diversos problemas de saúde"
+      },
+      "after": {
+        "image": "https://images.unsplash.com/photo-1584473153893-abdabcc2e010",
+        "title": "Alimentação Natural",
+        "description": "Com receitas naturais, seu pet terá mais energia, pelo mais brilhante e vida mais longa!"
+      }
+    },
+    {
+      "before": {
+        "image": "https://images.unsplash.com/photo-1617640975331-3ce9fb7a6310",
+        "title": "Sem Fonte de Renda Extra",
+        "description": "Dificuldades financeiras e sem perspectiva de renda adicional"
+      },
+      "after": {
+        "image": "https://images.unsplash.com/photo-1603796846097-bee99e4a601f",
+        "title": "Negócio Próprio e Lucrativo",
+        "description": "Um negócio com baixo investimento inicial e alto potencial de lucro"
+      }
+    },
+    {
+      "before": {
+        "image": "https://images.unsplash.com/photo-1517314207346-cc51165d21f4",
+        "title": "Pet com Problemas de Saúde",
+        "description": "Animais com dieta inadequada podem desenvolver problemas de pele, obesidade e baixa energia"
+      },
+      "after": {
+        "image": "https://images.unsplash.com/photo-1559190394-df5a28aab5c5",
+        "title": "Pet Saudável e Feliz",
+        "description": "Com alimentação natural, seu pet terá mais saúde, vitalidade e longevidade"
+      }
+    }
+  ],
+  "countdown": {
+    "title": "ESTA OFERTA ACABA EM:",
+    "hoursToAdd": 24
+  },
+  "sections": [
+    { 
+      "type": "hero" 
+    },
+    { 
+      "type": "social-proof",
+      "title": "JUNTE-SE A MILHARES DE PESSOAS QUE JÁ TRANSFORMARAM A VIDA DE SEUS PETS"
+    },
+    { 
+      "type": "text",
+      "content": "<h2 class='text-3xl font-bold text-center text-primary my-8'>COMPRANDO AINDA HOJE, VOCÊ TERÁ ACESSO A:</h2>",
+      "textColor": "#00FFC6"
+    },
+    { 
+      "type": "features" 
+    },
+    {
+      "type": "text",
+      "content": "<div class='max-w-3xl mx-auto bg-gray-900 rounded-lg p-6 my-8'><h3 class='text-2xl font-semibold text-primary mb-4'>Você sabia que 85% das doenças graves em cães e gatos se devem à má nutrição?</h3><p class='text-gray-300 mb-4'>Os corpos de nossos cães e gatos não são projetados para comer alimentos altamente processados. Ao contrário, alcançam plenitude e saúde quando os alimentos são preparados de forma natural, fresca, sem conservantes ou aditivos.</p><p class='text-gray-300'>Se você sabe o que estou lhe dizendo, este programa é para você.</p></div>"
+    },
+    {
+      "type": "before-after",
+      "title": "TRANSFORME A VIDA DO SEU PET E A SUA TAMBÉM!"
+    },
+    {
+      "type": "text",
+      "content": "<h2 class='text-3xl font-bold text-center text-primary my-8'>O QUE VOCÊ VAI APRENDER?</h2><ul class='max-w-3xl mx-auto list-disc pl-8 text-white space-y-3 mb-8'><li>Prepare receitas de pastelaria canina e felina, desenvolvidas nas suas proporções exatas e aprovadas</li><li>Selecione e use ingredientes que você tem em casa para preparar petiscos nutritivos e saudáveis ​​para seus animais de estimação</li><li>Conheça quais são os ingredientes que podem ser utilizados e quais são os que podem prejudicar, e muito, a vida dos peludos</li><li>Melhorar a alimentação diária de cães e gatos</li><li>Aprenda como tirar vantagem de um dos mercados em maior crecimento no mundo, empreendendo com receitas caseiras e naturais para pets</li></ul>"
+    },
+    { 
+      "type": "button",
+      "text": "🐾 QUERO COMEÇAR AGORA MESMO 🐾",
+      "link": "#compra"
+    },
+    { 
+      "type": "text",
+      "content": "<h2 class='text-3xl font-bold text-center text-white my-8'>VEJA O DEPOIMENTO DE QUEM JÁ COMPROU E APROVOU:</h2>",
+      "backgroundColor": "#00FFC6",
+      "textColor": "#000000"
+    },
+    { 
+      "type": "testimonials" 
+    },
+    { 
+      "type": "video" 
+    },
+    { 
+      "type": "text",
+      "content": "<h2 class='text-3xl font-bold text-center text-white my-8'>E NÃO PARA POR AÍ... <br><span class='text-primary'>ADQUIRINDO AGORA MESMO, VOCÊ RECEBERÁ 4 SUPER BÔNUS:</span></h2>"
+    },
+    { 
+      "type": "bonuses" 
+    },
+    { 
+      "type": "text",
+      "content": "<h2 class='text-3xl font-bold text-center text-primary my-8'><strong class='text-black'>E POR QUÊ VOCÊ DEVERIA FAZER PETISCOS NATURAIS PARA VENDER?</strong></h2>",
+      "backgroundColor": "#00FFC6",
+      "textColor": "#000000"
+    },
+    {
+      "type": "text",
+      "content": "<p class='text-xl text-center text-white max-w-3xl mx-auto'>Além de ser um dos mercados em <strong class='text-black'>maior crecimento no Brasil</strong>, sendo notícias em todos os telejornais pelo <strong class='text-white'>país</strong>, também sabemos que os donos dos pets não medem esforços para <strong class='text-white'>agradar os seus filhos de quatro patas</strong>.</p>",
+      "backgroundColor": "#00FFC6",
+      "textColor": "#000000"
+    },
+    {
+      "type": "countdown"
+    },
+    { 
+      "type": "checkout",
+      "text": "🐾 QUERO ADQUIRIR AGORA MESMO! 🐾",
+      "link": "http://mon.net.br/276gh6?src=Allan"
+    },
+    { 
+      "type": "guarantee",
+      "text": "NÓS ASSUMIMOS OS RISCOS!",
+      "content": "Caso você não aprove o conteúdo do e-book, nós iremos devolver todo o seu dinheiro. Você terá 7 dias de garantia para testar e aprovar o conteúdo. Porém, estamos convictos que não será necessário, pois sabemos de toda a transformação que as receitinhas podem trazer para a sua vida como empreendedor e para a vida dos pets."
+    },
+    { 
+      "type": "faqs",
+      "text": "PERGUNTAS FREQUENTES"
+    }
+  ]
+}

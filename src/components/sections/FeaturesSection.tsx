@@ -1,68 +1,42 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { FeatureCard as FeatureCardType } from '../../types/landing';
+import { FeatureCard } from '../../types/landing';
 
 interface FeaturesSectionProps {
-  features: FeatureCardType[];
+  features: FeatureCard[];
 }
 
 export const FeaturesSection: React.FC<FeaturesSectionProps> = ({ features }) => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-
-  const containerVariants = {
-    hidden: {},
-    visible: {
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
-  const cardVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-      },
-    },
-  };
-
   return (
-    <div className="py-24 px-4 bg-gradient-to-b from-gray-50 to-white">
-      <motion.div
-        ref={ref}
-        variants={containerVariants}
-        initial="hidden"
-        animate={inView ? "visible" : "hidden"}
-        className="max-w-7xl mx-auto"
-      >
+    <section className="py-16 bg-black">
+      <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <motion.div
-              key={index}
-              variants={cardVariants}
-              className="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
+            <div 
+              key={index} 
+              className="bg-gradient-to-b from-primary to-black rounded-3xl p-6 border border-primary/30 shadow-lg shadow-primary/20 flex flex-col items-center transform transition-transform hover:scale-[1.02]"
             >
-              <div className="relative mb-6">
-                <div className="absolute inset-0 bg-blue-500/10 rounded-full transform -rotate-6 transition-transform group-hover:rotate-3" />
-                <img
-                  src={feature.icon}
-                  alt={feature.title}
-                  className="relative w-16 h-16 object-contain"
+              {feature.image ? (
+                <img 
+                  src={feature.image} 
+                  alt={feature.title} 
+                  className="w-44 h-auto mb-6"
                 />
-              </div>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900">{feature.title}</h3>
-              <p className="text-gray-600 leading-relaxed">{feature.description}</p>
-            </motion.div>
+              ) : feature.icon && (
+                <div className="w-16 h-16 text-primary mb-4">
+                  <img 
+                    src={feature.icon}
+                    alt=""
+                    className="w-full h-full"
+                  />
+                </div>
+              )}
+              
+              <h3 className="text-xl font-bold text-accent mb-4 text-center">{feature.title}</h3>
+              <p className="text-gray-300 text-center">{feature.description}</p>
+            </div>
           ))}
         </div>
-      </motion.div>
-    </div>
+      </div>
+    </section>
   );
 };

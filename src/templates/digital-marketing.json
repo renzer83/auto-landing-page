@@ -1,0 +1,140 @@
+{
+  "title": "Master the Art of Digital Marketing",
+  "subtitle": "Exclusive Course to Elevate Your Skills",
+  "hero": {
+    "backgroundImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa",
+    "title": "Revolutionize Your Online Presence",
+    "subtitle": "Learn from industry experts and transform your business",
+    "video": "https://example.com/marketing-intro.mp4"
+  },
+  "colors": {
+    "primary": "#0F172A",
+    "secondary": "#3B82F6",
+    "accent": "#10B981",
+    "background": "#F8FAFC"
+  },
+  "stats": [
+    { "label": "Course Modules", "value": "12", "icon": "bookmark" },
+    { "label": "Total Hours", "value": "60+", "icon": "clock" },
+    { "label": "Students Enrolled", "value": "25K+", "icon": "users" },
+    { "label": "Success Rate", "value": "94%", "icon": "trending-up" }
+  ],
+  "features": [
+    {
+      "icon": "https://api.iconify.design/lucide:search.svg",
+      "title": "SEO Mastery",
+      "description": "Learn advanced techniques to rank higher on search engines and drive organic traffic."
+    },
+    {
+      "icon": "https://api.iconify.design/lucide:megaphone.svg",
+      "title": "Social Media Strategy",
+      "description": "Create viral campaigns and build a loyal following across all platforms."
+    },
+    {
+      "icon": "https://api.iconify.design/lucide:mail.svg",
+      "title": "Email Marketing",
+      "description": "Craft compelling emails that convert and build automated funnels."
+    },
+    {
+      "icon": "https://api.iconify.design/lucide:bar-chart-2.svg",
+      "title": "Analytics & Optimization",
+      "description": "Track, measure, and optimize every aspect of your marketing campaigns."
+    }
+  ],
+  "pricing": [
+    {
+      "name": "Basic Access",
+      "price": 299,
+      "features": [
+        "12 Course Modules",
+        "60+ Hours of Content",
+        "Basic Assignments",
+        "3 Months Access"
+      ]
+    },
+    {
+      "name": "Pro Access",
+      "price": 499,
+      "features": [
+        "All Basic Features",
+        "1-on-1 Consulting Session",
+        "Live Q&A Sessions",
+        "Case Studies Library",
+        "Lifetime Access"
+      ],
+      "recommended": true
+    },
+    {
+      "name": "Agency Access",
+      "price": 999,
+      "features": [
+        "All Pro Features",
+        "Team Access (5 members)",
+        "Agency Growth Blueprint",
+        "Weekly Strategy Calls",
+        "White-label Resources"
+      ]
+    }
+  ],
+  "team": [
+    {
+      "name": "John Morgan",
+      "role": "Head Instructor",
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
+      "linkedin": "https://linkedin.com/example"
+    },
+    {
+      "name": "Sophia Lee",
+      "role": "SEO Specialist",
+      "image": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f",
+      "linkedin": "https://linkedin.com/example"
+    },
+    {
+      "name": "David Rodriguez",
+      "role": "Social Media Expert",
+      "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e",
+      "linkedin": "https://linkedin.com/example"
+    }
+  ],
+  "testimonials": [
+    {
+      "quote": "This course transformed our approach to digital marketing. Our online sales have increased by 215% in just three months!",
+      "author": "Rachel Kim",
+      "role": "Marketing Director",
+      "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
+      "company": {
+        "name": "StyleHouse",
+        "logo": "https://example.com/stylehouse.svg"
+      }
+    },
+    {
+      "quote": "The strategies I learned helped me build a 6-figure online business from scratch. Best investment in my career.",
+      "author": "Michael Patel",
+      "role": "Entrepreneur",
+      "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
+      "company": {
+        "name": "DigitalGrowth",
+        "logo": "https://example.com/digitalgrowth.svg"
+      }
+    }
+  ],
+  "sections": [
+    { "type": "hero" },
+    { "type": "stats" },
+    { "type": "features" },
+    {
+      "type": "text",
+      "content": "Our comprehensive digital marketing course is designed by industry professionals with decades of experience. Whether you're a beginner or seasoned marketer, this course will equip you with cutting-edge strategies to dominate the digital landscape."
+    },
+    { "type": "pricing" },
+    { "type": "testimonials" },
+    { "type": "team" },
+    { "type": "newsletter" },
+    { "type": "contact" },
+    {
+      "type": "button",
+      "text": "Enroll Now",
+      "link": "https://example.com/enroll"
+    }
+  ]
+}

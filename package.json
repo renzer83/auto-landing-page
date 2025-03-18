@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "setup": "npm install @tailwindcss/typography @tailwindcss/aspect-ratio --save-dev"
   },
   "dependencies": {
     "framer-motion": "^11.0.8",
@@ -19,6 +20,8 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.9.1",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/typography": "^0.5.10",
     "@types/react": "^18.3.5",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",

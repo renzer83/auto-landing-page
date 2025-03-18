@@ -1,5 +1,4 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useEffect, useState } from 'react';
 import { HeroSection as HeroSectionType } from '../../types/landing';
 
 interface HeroSectionProps {
@@ -7,75 +6,79 @@ interface HeroSectionProps {
 }
 
 export const HeroSection: React.FC<HeroSectionProps> = ({ data }) => {
+  const [imageLoaded, setImageLoaded] = useState(false);
+  
+  useEffect(() => {
+    // Pré-carregar a imagem de fundo
+    const img = new Image();
+    img.src = data.backgroundImage;
+    img.onload = () => setImageLoaded(true);
+  }, [data.backgroundImage]);
+
+  const backgroundStyles = {
+    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url(${data.backgroundImage})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+  };
+
   return (
-    <div 
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+    <section 
+      className="relative min-h-[90vh] flex flex-col justify-center items-center text-white py-16 transition-opacity duration-500"
       style={{
-        backgroundImage: `url(${data.backgroundImage})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed',
+        ...backgroundStyles,
+        opacity: imageLoaded ? 1 : 0.3,
       }}
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/70" />
+      {/* Fallback background color while image loads */}
+      <div 
+        className="absolute inset-0 bg-black -z-10"
+        style={{ opacity: imageLoaded ? 0 : 1 }}
+      ></div>
       
-      <motion.div 
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto"
-      >
-        <motion.h1 
-          className="text-5xl md:text-7xl font-bold mb-6"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          {data.title}
-        </motion.h1>
-        
-        <motion.p 
-          className="text-xl md:text-2xl opacity-90"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-        >
-          {data.subtitle}
-        </motion.p>
-
-        {data.video && (
-          <motion.div 
-            className="mt-12"
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-          >
-            <div className="relative aspect-video max-w-3xl mx-auto rounded-xl overflow-hidden shadow-2xl">
-              <video 
-                src={data.video}
-                className="w-full h-full object-cover"
-                autoPlay
-                muted
-                loop
-                playsInline
-              />
-            </div>
-          </motion.div>
-        )}
-      </motion.div>
-
-      <motion.div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.8 }}
-      >
-        <div className="animate-bounce">
-          <div className="w-6 h-10 border-2 border-white rounded-full flex items-start justify-center p-1">
-            <div className="w-1 h-3 bg-white rounded-full" />
+      <div className="container mx-auto px-4 text-center relative z-10">
+        {data.logo && (
+          <div className="flex justify-center mb-6">
+            <img 
+              src={data.logo} 
+              alt="Logo" 
+              className="w-32 md:w-40 h-auto animate-fade-in"
+            />
           </div>
-        </div>
-      </motion.div>
-    </div>
+        )}
+        
+        <h1 className="text-3xl md:text-5xl font-bold mb-6 animate-slide-up max-w-4xl mx-auto leading-tight">
+          {data.title}
+        </h1>
+        
+        <p className="text-lg md:text-xl mb-8 animate-slide-up max-w-3xl mx-auto opacity-90">
+          {data.subtitle}
+        </p>
+        
+        {data.video && (
+          <div className="max-w-3xl mx-auto mb-8 animate-fade-in rounded-lg overflow-hidden border-4 border-primary shadow-lg shadow-primary/30">
+            <iframe
+              width="100%"
+              height="315"
+              src={data.video.replace('watch?v=', 'embed/')}
+              title="Video"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="aspect-video"
+            ></iframe>
+          </div>
+        )}
+        
+        {data.buttonText && data.buttonLink && (
+          <a
+            href={data.buttonLink}
+            className="inline-block bg-primary hover:bg-primary/80 text-black font-bold py-4 px-8 rounded-full text-xl transform transition-transform hover:scale-105 animate-pulse shadow-lg shadow-primary/30"
+          >
+            {data.buttonText}
+          </a>
+        )}
+      </div>
+    </section>
   );
 };

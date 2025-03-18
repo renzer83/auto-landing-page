@@ -11,8 +11,22 @@ import { PricingSection } from './sections/PricingSection';
 import { TeamSection } from './sections/TeamSection';
 import { NewsletterSection } from './sections/NewsletterSection';
 import { ContactSection } from './sections/ContactSection';
+import { BonusesSection } from './sections/BonusesSection';
+import { FAQSection } from './sections/FAQSection';
+import { VideoSection } from './sections/VideoSection';
+import { HTMLSection } from './sections/HTMLSection';
+import { GuaranteeSection } from './sections/GuaranteeSection';
+import { CheckoutSection } from './sections/CheckoutSection';
+import { SocialProofSection } from './sections/SocialProofSection';
+import { BeforeAfterSection } from './sections/BeforeAfterSection';
+import { CountdownSection } from './sections/CountdownSection';
+import { FloatingCTASection } from './sections/FloatingCTASection';
+import { FloatingNotifications } from './sections/FloatingNotifications';
+import { WhatsAppButton } from './sections/WhatsAppButton';
+import { ExitIntentPopup } from './sections/ExitIntentPopup';
 import { LandingPageData, Section } from '../types/landing';
 import { Loader2 } from 'lucide-react';
+import { loadTemplate } from '../utils/templateLoader';
 
 export const LandingPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -23,293 +37,22 @@ export const LandingPage: React.FC = () => {
   React.useEffect(() => {
     const fetchData = async () => {
       try {
-        // For demo purposes, we're using mock data
-        let mockData: LandingPageData;
-
-        // Nutrition product mock data
-        if (id === 'protein') {
-          mockData = {
-            title: "Premium Plant-Based Protein",
-            subtitle: "Fuel Your Body. Transform Your Life.",
-            hero: {
-              backgroundImage: "https://images.unsplash.com/photo-1593095948071-474c5cc2989d",
-              title: "The Future of Nutrition",
-              subtitle: "Clean. Pure. Powerful.",
-              video: "https://example.com/protein-intro.mp4"
-            },
-            colors: {
-              primary: "#2DD4BF",
-              secondary: "#059669",
-              accent: "#F59E0B",
-              background: "#F8FAFC"
-            },
-            stats: [
-              { label: "Protein per Serving", value: "25g", icon: "activity" },
-              { label: "Natural Ingredients", value: "100%", icon: "database" },
-              { label: "Happy Customers", value: "50K+", icon: "users" },
-              { label: "Countries Served", value: "30+", icon: "globe" }
-            ],
-            features: [
-              {
-                icon: "https://api.iconify.design/lucide:leaf.svg",
-                title: "Plant-Based Formula",
-                description: "Made from premium pea protein and organic ingredients for maximum bioavailability."
-              },
-              {
-                icon: "https://api.iconify.design/lucide:dumbbell.svg",
-                title: "Enhanced Recovery",
-                description: "Optimal amino acid profile to support muscle recovery and growth."
-              },
-              {
-                icon: "https://api.iconify.design/lucide:heart.svg",
-                title: "Heart Healthy",
-                description: "Zero cholesterol and low in saturated fats for cardiovascular health."
-              },
-              {
-                icon: "https://api.iconify.design/lucide:sparkles.svg",
-                title: "Great Taste",
-                description: "Delicious natural flavors with no artificial sweeteners."
-              }
-            ],
-            pricing: [
-              {
-                name: "Starter Pack",
-                price: 39.99,
-                features: [
-                  "1 bag (30 servings)",
-                  "Free Shaker",
-                  "Digital Recipe Guide",
-                  "Standard Shipping"
-                ]
-              },
-              {
-                name: "Value Pack",
-                price: 99.99,
-                features: [
-                  "3 bags (90 servings)",
-                  "Premium Shaker",
-                  "Digital Recipe Guide",
-                  "Workout Program",
-                  "Free Priority Shipping"
-                ],
-                recommended: true
-              },
-              {
-                name: "Bulk Pack",
-                price: 179.99,
-                features: [
-                  "6 bags (180 servings)",
-                  "Limited Edition Shaker",
-                  "Complete Nutrition Guide",
-                  "Personal Coach Session",
-                  "Free Priority Shipping"
-                ]
-              }
-            ],
-            team: [
-              {
-                name: "Dr. Emily Chen",
-                role: "Chief Nutritionist",
-                image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
-                linkedin: "https://linkedin.com/example"
-              },
-              {
-                name: "Mark Thompson",
-                role: "Product Development",
-                image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
-                linkedin: "https://linkedin.com/example"
-              },
-              {
-                name: "Sarah Williams",
-                role: "Quality Assurance",
-                image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80",
-                linkedin: "https://linkedin.com/example"
-              }
-            ],
-            testimonials: [
-              {
-                quote: "This protein powder has transformed my post-workout recovery. The taste is amazing, and I love that it's all-natural!",
-                author: "Alex Rivera",
-                role: "Professional Athlete",
-                avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e",
-                company: {
-                  name: "Elite Athletics",
-                  logo: "https://example.com/elite.svg"
-                }
-              },
-              {
-                quote: "Finally, a plant-based protein that actually tastes good! It's become an essential part of my daily nutrition.",
-                author: "Lisa Chen",
-                role: "Fitness Instructor",
-                avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
-                company: {
-                  name: "FitLife Studio",
-                  logo: "https://example.com/fitlife.svg"
-                }
-              }
-            ],
-            sections: [
-              { type: "hero" },
-              { type: "stats" },
-              { type: "features" },
-              {
-                type: "text",
-                content: "Our premium plant-based protein is crafted from the finest organic ingredients, delivering optimal nutrition for your active lifestyle. Each serving packs 25g of complete protein, essential amino acids, and natural nutrients to support your fitness journey."
-              },
-              { type: "pricing" },
-              { type: "team" },
-              { type: "testimonials" },
-              { type: "newsletter" },
-              { type: "contact" },
-              {
-                type: "button",
-                text: "Shop Now",
-                link: "https://example.com/shop"
-              }
-            ]
-          };
+        // Simular tempo de carregamento
+        await new Promise(resolve => setTimeout(resolve, 500));
+        
+        // Carregar o template com base no ID da URL
+        const templateId = id || 'digital-marketing'; // Template padrão se não tiver ID
+        const templateData = loadTemplate(templateId);
+        
+        if (templateData) {
+          setData(templateData);
+          setLoading(false);
         } else {
-          // Use the existing course data as default
-          mockData = {
-            title: "Master the Art of Digital Marketing",
-            subtitle: "Exclusive Course to Elevate Your Skills",
-            hero: {
-              backgroundImage: "https://images.unsplash.com/photo-1451187580459-43490279c0fa",
-              title: "Revolutionize Your Enterprise",
-              subtitle: "Harness the power of AI and cloud technology",
-              video: "https://example.com/background.mp4"
-            },
-            colors: {
-              primary: "#0F172A",
-              secondary: "#3B82F6",
-              accent: "#10B981",
-              background: "#F8FAFC"
-            },
-            stats: [
-              { label: "Active Users", value: "100K+", icon: "users" },
-              { label: "Data Processed", value: "500TB", icon: "database" },
-              { label: "Uptime", value: "99.99%", icon: "activity" },
-              { label: "Global Locations", value: "25+", icon: "globe" }
-            ],
-            features: [
-              {
-                icon: "https://api.iconify.design/lucide:cpu.svg",
-                title: "AI-Powered Analytics",
-                description: "Advanced machine learning algorithms process your data in real-time."
-              },
-              {
-                icon: "https://api.iconify.design/lucide:cloud.svg",
-                title: "Cloud Infrastructure",
-                description: "Scalable cloud solutions that grow with your business needs."
-              },
-              {
-                icon: "https://api.iconify.design/lucide:shield.svg",
-                title: "Enterprise Security",
-                description: "Military-grade encryption and security protocols protect your data."
-              }
-            ],
-            pricing: [
-              {
-                name: "Starter",
-                price: 49,
-                features: [
-                  "Basic Analytics",
-                  "5 Team Members",
-                  "10GB Storage",
-                  "Email Support"
-                ]
-              },
-              {
-                name: "Professional",
-                price: 99,
-                features: [
-                  "Advanced Analytics",
-                  "25 Team Members",
-                  "100GB Storage",
-                  "24/7 Support"
-                ],
-                recommended: true
-              },
-              {
-                name: "Enterprise",
-                price: 299,
-                features: [
-                  "Custom Analytics",
-                  "Unlimited Team Members",
-                  "1TB Storage",
-                  "Dedicated Support"
-                ]
-              }
-            ],
-            team: [
-              {
-                name: "Dr. Sarah Chen",
-                role: "Chief AI Officer",
-                image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
-                linkedin: "https://linkedin.com/example"
-              },
-              {
-                name: "Michael Rodriguez",
-                role: "Head of Engineering",
-                image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
-                linkedin: "https://linkedin.com/example"
-              },
-              {
-                name: "Emily Thompson",
-                role: "Product Director",
-                image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80",
-                linkedin: "https://linkedin.com/example"
-              }
-            ],
-            testimonials: [
-              {
-                quote: "This platform has transformed our data analytics capabilities. We've seen a 300% increase in processing efficiency.",
-                author: "James Wilson",
-                role: "CTO, TechGlobal",
-                avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
-                company: {
-                  name: "TechGlobal",
-                  logo: "https://example.com/techglobal.svg"
-                }
-              },
-              {
-                quote: "The AI-powered insights have revolutionized our decision-making process. A game-changer for our enterprise.",
-                author: "Lisa Chen",
-                role: "Director of Innovation, FutureCorp",
-                avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
-                company: {
-                  name: "FutureCorp",
-                  logo: "https://example.com/futurecorp.svg"
-                }
-              }
-            ],
-            sections: [
-              { type: "hero" },
-              { type: "stats" },
-              { type: "features" },
-              {
-                type: "text",
-                content: "Experience the future of enterprise solutions with our cutting-edge platform. Powered by advanced AI and machine learning, we deliver unprecedented insights and efficiency."
-              },
-              { type: "pricing" },
-              { type: "team" },
-              { type: "testimonials" },
-              { type: "newsletter" },
-              { type: "contact" },
-              {
-                type: "button",
-                text: "Schedule a Demo",
-                link: "https://example.com/demo"
-              }
-            ]
-          };
+          setError('Template não encontrado');
+          setLoading(false);
         }
-
-        await new Promise(resolve => setTimeout(resolve, 1000));
-        setData(mockData);
-        setLoading(false);
       } catch (err) {
-        setError('Failed to load landing page data');
+        setError('Falha ao carregar os dados da landing page');
         setLoading(false);
       }
     };
@@ -319,16 +62,16 @@ export const LandingPage: React.FC = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <Loader2 className="w-8 h-8 animate-spin text-gray-700" />
+      <div className="min-h-screen flex items-center justify-center bg-black">
+        <Loader2 className="w-10 h-10 animate-spin text-primary" />
       </div>
     );
   }
 
   if (error || !data) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <p className="text-red-500">{error || 'Failed to load content'}</p>
+      <div className="min-h-screen flex items-center justify-center bg-black">
+        <p className="text-red-500 text-xl">{error || 'Falha ao carregar conteúdo'}</p>
       </div>
     );
   }
@@ -352,7 +95,14 @@ export const LandingPage: React.FC = () => {
       case 'contact':
         return <ContactSection />;
       case 'text':
-        return section.content && <TextSection content={section.content} />;
+        return section.content && (
+          <TextSection 
+            content={section.content} 
+            backgroundColor={section.backgroundColor} 
+            textColor={section.textColor} 
+            borderColor={section.borderColor}
+          />
+        );
       case 'image':
         return section.url && section.alt && (
           <ImageSection url={section.url} alt={section.alt} />
@@ -365,6 +115,71 @@ export const LandingPage: React.FC = () => {
             colors={data.colors}
           />
         );
+      case 'bonuses':
+        return data.bonuses && (
+          <BonusesSection 
+            bonuses={data.bonuses} 
+            title={section.title || section.text || "Bônus Exclusivos"}
+          />
+        );
+      case 'faqs':
+        return data.faqs && (
+          <FAQSection 
+            faqs={data.faqs} 
+            title={section.title || section.text || "Perguntas Frequentes"}
+          />
+        );
+      case 'video':
+        return data.videos && (
+          <VideoSection 
+            videos={data.videos} 
+            title={section.title || section.text}
+          />
+        );
+      case 'html':
+        return section.htmlContent && (
+          <HTMLSection htmlContent={section.htmlContent} />
+        );
+      case 'guarantee':
+        return (
+          <GuaranteeSection 
+            days={7} 
+            title={section.title || section.text || "Nossa Garantia"}
+            description={section.content}
+          />
+        );
+      case 'checkout':
+        return (
+          <CheckoutSection 
+            productName={data.title}
+            price={27.00}
+            buttonText={section.text || "COMPRAR AGORA"}
+            buttonLink={section.link || "#"}
+            installments="ou até 3x de 9,54 no cartão de crédito"
+          />
+        );
+      case 'social-proof':
+        return data.socialProof && (
+          <SocialProofSection 
+            items={data.socialProof}
+            title={section.title || section.text}
+          />
+        );
+      case 'before-after':
+        return data.beforeAfter && (
+          <BeforeAfterSection 
+            items={data.beforeAfter}
+            title={section.title || section.text}
+          />
+        );
+      case 'countdown':
+        return data.countdown && (
+          <CountdownSection 
+            title={data.countdown.title || section.title || "ESTA OFERTA ACABA EM:"}
+            endTime={data.countdown.endTime}
+            hoursToAdd={data.countdown.hoursToAdd}
+          />
+        );
       default:
         return null;
     }
@@ -373,13 +188,34 @@ export const LandingPage: React.FC = () => {
   return (
     <div 
       className="min-h-screen"
-      style={{ backgroundColor: data.colors.background || '#ffffff' }}
+      style={{ 
+        backgroundColor: data.colors.background || '#000000',
+        '--primary': data.colors.primary,
+        '--secondary': data.colors.secondary,
+        '--accent': data.colors.accent || data.colors.primary
+      } as React.CSSProperties}
     >
       {data.sections.map((section, index) => (
         <div key={index} className="scroll-mt-20" id={section.type}>
           {renderSection(section)}
         </div>
       ))}
+      
+      {/* CTA Flutuante */}
+      <FloatingCTASection
+        buttonText="🐾 QUERO GARANTIR AGORA! 🐾"
+        buttonLink="#compra"
+        showAfterScroll={800}
+      />
+      
+      {/* Notificações Flutuantes */}
+      <FloatingNotifications position="bottom-left" />
+      
+      {/* Botão do WhatsApp */}
+      <WhatsAppButton phoneNumber="+5511999999999" position="bottom-right" />
+      
+      {/* Popup de Saída */}
+      <ExitIntentPopup discountCode="POWERPET30" />
     </div>
   );
 };
