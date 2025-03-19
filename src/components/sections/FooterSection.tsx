@@ -1,5 +1,6 @@
 import React from 'react';
 import { FooterSettings } from '../../types/landing';
+import { CachedImage } from '../common/CachedImage';
 
 interface FooterSectionProps {
   data?: FooterSettings;
@@ -35,11 +36,14 @@ export const FooterSection: React.FC<FooterSectionProps> = ({
           {/* Coluna com logo e informações da empresa */}
           <div className="w-full md:w-1/4 mb-8 md:mb-0">
             {logo && (
-              <div className="mb-6">
-                <img 
+              <div className="mb-6 h-16 flex">
+                <CachedImage 
                   src={logo} 
                   alt={companyName} 
-                  className="h-12 max-w-full" 
+                  className="h-16"
+                  width="auto"
+                  height="64"
+                  objectFit="contain"
                 />
               </div>
             )}
@@ -56,11 +60,16 @@ export const FooterSection: React.FC<FooterSectionProps> = ({
                     rel="noopener noreferrer"
                     className="text-current hover:text-primary transition-colors"
                   >
-                    <img 
-                      src={social.icon} 
-                      alt="Social Media" 
-                      className="w-6 h-6"
-                    />
+                    <div className="w-6 h-6">
+                      <CachedImage 
+                        src={social.icon} 
+                        alt="Social Media" 
+                        className="w-6 h-6"
+                        width="24"
+                        height="24"
+                        objectFit="contain"
+                      />
+                    </div>
                   </a>
                 ))}
               </div>

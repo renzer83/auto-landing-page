@@ -1,22 +1,62 @@
 import React, { useEffect, useState } from 'react';
 import { HeroSection as HeroSectionType } from '../../types/landing';
+import { imageCache } from '../../utils/imageCache';
+import { CachedImage } from '../common/CachedImage';
 
 interface HeroSectionProps {
   data: HeroSectionType;
 }
 
 export const HeroSection: React.FC<HeroSectionProps> = ({ data }) => {
+  const [backgroundImageUrl, setBackgroundImageUrl] = useState<string>('');
   const [imageLoaded, setImageLoaded] = useState(false);
   
   useEffect(() => {
-    // Pré-carregar a imagem de fundo
-    const img = new Image();
-    img.src = data.backgroundImage;
-    img.onload = () => setImageLoaded(true);
-  }, [data.backgroundImage]);
+    // Carrega a imagem de fundo do cache
+    const loadBackgroundImage = async () => {
+      try {
+        // Tenta carregar do cache
+        const cachedUrl = await imageCache.getImage(data.backgroundImage);
+        setBackgroundImageUrl(cachedUrl);
+        
+        // Pré-carregar a imagem para garantir que esteja disponível
+        const img = new Image();
+        img.src = cachedUrl;
+        img.onload = () => setImageLoaded(true);
+        img.onerror = () => {
+          // Se falhar, tenta a URL original
+          console.warn('Falha ao carregar imagem em cache, tentando URL original');
+          setBackgroundImageUrl(data.backgroundImage);
+          setImageLoaded(true);
+        };
+      } catch (error) {
+        console.error('Erro ao carregar imagem de fundo:', error);
+        // Fallback para URL original em caso de erro
+        setBackgroundImageUrl(data.backgroundImage);
+        setImageLoaded(true);
+      }
+    };
+    
+    loadBackgroundImage();
+    
+    // Timeout de segurança para garantir que algo apareça mesmo se houver problemas
+    const safetyTimeout = setTimeout(() => {
+      if (!imageLoaded) {
+        console.warn('Timeout ao carregar imagem de fundo, usando fallback');
+        setBackgroundImageUrl(data.backgroundImage);
+        setImageLoaded(true);
+      }
+    }, 3000);
+    
+    return () => clearTimeout(safetyTimeout);
+  }, [data.backgroundImage, imageLoaded]);
 
+  // Gera os estilos de fundo com a imagem em cache
   const backgroundStyles = {
-    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url(${data.backgroundImage})`,
+    backgroundImage: backgroundImageUrl 
+      ? `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url(${backgroundImageUrl})`
+      : undefined,
+    backgroundColor: '#000',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
@@ -38,11 +78,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ data }) => {
       
       <div className="container mx-auto px-4 text-center relative z-10">
         {data.logo && (
-          <div className="flex justify-center mb-6">
-            <img 
+          <div className="flex justify-center mb-6 h-32">
+            <CachedImage 
               src={data.logo} 
               alt="Logo" 
-              className="w-32 md:w-40 h-auto animate-fade-in"
+              className="h-32"
+              objectFit="contain"
+              width="auto"
+              height="128"
             />
           </div>
         )}

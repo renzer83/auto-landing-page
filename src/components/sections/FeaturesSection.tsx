@@ -1,5 +1,6 @@
 import React from 'react';
 import { FeatureCard } from '../../types/landing';
+import { CachedImage } from '../common/CachedImage';
 
 interface FeaturesSectionProps {
   features: FeatureCard[];
@@ -16,17 +17,25 @@ export const FeaturesSection: React.FC<FeaturesSectionProps> = ({ features }) =>
               className="bg-gradient-to-b from-primary to-black rounded-3xl p-6 border border-primary/30 shadow-lg shadow-primary/20 flex flex-col items-center transform transition-transform hover:scale-[1.02]"
             >
               {feature.image ? (
-                <img 
-                  src={feature.image} 
-                  alt={feature.title} 
-                  className="w-44 h-auto mb-6"
-                />
+                <div className="mb-6 flex justify-center">
+                  <CachedImage 
+                    src={feature.image} 
+                    alt={feature.title} 
+                    className="h-40 object-contain"
+                    width="auto"
+                    height="160"
+                    objectFit="contain"
+                  />
+                </div>
               ) : feature.icon && (
-                <div className="w-16 h-16 text-primary mb-4">
-                  <img 
+                <div className="w-16 h-16 mb-4 flex justify-center">
+                  <CachedImage 
                     src={feature.icon}
                     alt=""
-                    className="w-full h-full"
+                    className="w-16 h-16"
+                    width="64"
+                    height="64"
+                    objectFit="contain"
                   />
                 </div>
               )}

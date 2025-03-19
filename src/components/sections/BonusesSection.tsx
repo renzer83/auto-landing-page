@@ -1,5 +1,6 @@
 import React from 'react';
 import { Bonus } from '../../types/landing';
+import { CachedImage } from '../common/CachedImage';
 
 interface BonusesSectionProps {
   bonuses: Bonus[];
@@ -21,11 +22,16 @@ export const BonusesSection: React.FC<BonusesSectionProps> = ({ bonuses, title }
               className="bg-gradient-to-b from-primary/20 to-black rounded-3xl p-6 flex flex-col items-center border border-primary/50 shadow-lg shadow-primary/20 transform transition-transform hover:scale-[1.02]"
             >
               <div className="flex flex-col md:flex-row items-center mb-4">
-                <img 
-                  src={bonus.image} 
-                  alt={bonus.title}
-                  className="w-40 h-auto mb-4 md:mb-0 md:mr-6"
-                />
+                <div className="flex-shrink-0 w-40 h-auto mb-4 md:mb-0 md:mr-6 flex justify-center">
+                  <CachedImage 
+                    src={bonus.image} 
+                    alt={bonus.title}
+                    className="object-contain"
+                    width="auto"
+                    height="160"
+                    objectFit="contain"
+                  />
+                </div>
                 <div>
                   <h3 className="text-2xl font-semibold text-primary mb-2 text-center md:text-left">{bonus.title}</h3>
                   <p className="text-gray-300 text-center md:text-left">{bonus.description}</p>

@@ -157,19 +157,19 @@
   "beforeAfter": [
     {
       "before": {
-        "image": "https://images.unsplash.com/photo-1611224885990-ab7363d1f2a9",
+        "image": "https://api.finditbuy.com/api/images/pub?filename=powerpet/pexels-photo-3318214.jpeg",
         "title": "Alimentação Industrial",
         "description": "Pets com dieta baseada em produtos industrializados podem desenvolver diversos problemas de saúde"
       },
       "after": {
-        "image": "https://images.unsplash.com/photo-1584473153893-abdabcc2e010",
+        "image": "https://api.finditbuy.com/api/images/pub?filename=powerpet/pexels-rdne-7310213.jpg",
         "title": "Alimentação Natural",
         "description": "Com receitas naturais, seu pet terá mais energia, pelo mais brilhante e vida mais longa!"
       }
     },
     {
       "before": {
-        "image": "https://api.finditbuy.com/api/images/pub?filename=powerpet/pexels-pixabay-210600.jpg",
+        "image": "https://api.finditbuy.com/api/images/pub?filename=powerpet/pexels-towfiqu-barbhuiya-3440682-12001949.jpg",
         "title": "Sem Fonte de Renda Extra",
         "description": "Dificuldades financeiras e sem perspectiva de renda adicional"
       },

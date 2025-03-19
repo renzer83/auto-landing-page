@@ -22,6 +22,8 @@ export interface FooterColumn {
     text: string;
     url: string;
   }[];
+}
+
 export interface LandingPageData {
   title: string;
   subtitle?: string;
