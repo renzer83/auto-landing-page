@@ -7,11 +7,13 @@ const templates: Record<string, LandingPageData> = {};
 import protein from '../templates/protein.json';
 import digitalMarketing from '../templates/digital-marketing.json';
 import powerPet from '../templates/powerpet.json';
+import pascoaLucrativa from '../templates/pascoa-lucrativa.json';
 
 // Registrar os templates
 templates['protein'] = protein as LandingPageData;
 templates['digital-marketing'] = digitalMarketing as LandingPageData;
 templates['powerpet'] = powerPet as LandingPageData;
+templates['pascoa-lucrativa'] = pascoaLucrativa as LandingPageData;
 
 /**
  * Carrega um template específico pelo ID

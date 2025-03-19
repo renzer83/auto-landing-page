@@ -1,0 +1,209 @@
+{
+  "title": "Páscoa Lucrativa",
+  "subtitle": "Aprenda a Fazer Deliciosos Ovos de Páscoa Recheados e Triplique sua Fonte de Renda",
+  "hero": {
+    "backgroundImage": "http://digitalmarketplaceworld.shop/wp-content/uploads/2024/01/capa-pv-ovo.png",
+    "title": "APRENDA A FAZER DELICIOSOS OVOS DE PÁSCOA RECHEADOS",
+    "subtitle": "TRIPLIQUE SUA FONTE DE RENDA VENDENDO DIARIAMENTE NO IFOOD COM NOSSO CURSO PASSO A PASSO",
+    "video": "https://www.youtube.com/watch?v=wl4aMXqPswc",
+    "buttonText": "QUERO TRIPLICAR MINHA FONTE DE RENDA",
+    "buttonLink": "#COMPRA"
+  },
+  "colors": {
+    "primary": "#FFFD00",
+    "secondary": "#362118",
+    "accent": "#FFD500",
+    "background": "#FFFFFF"
+  },
+  "stats": [
+    { "label": "Ovos por semana", "value": "100+", "icon": "gift" },
+    { "label": "Alunos satisfeitos", "value": "500+", "icon": "users" },
+    { "label": "Sabores deliciosos", "value": "15", "icon": "heart" },
+    { "label": "Faturamento mensal", "value": "R$3.000+", "icon": "trending-up" }
+  ],
+  "features": [
+    {
+      "icon": "https://api.iconify.design/lucide:dollar-sign.svg",
+      "title": "Lucratividade",
+      "description": "Vender ovos de Páscoa pode ser uma excelente oportunidade para obter renda extra, pois são produtos com alta demanda e preços elevados."
+    },
+    {
+      "icon": "https://api.iconify.design/lucide:calendar.svg",
+      "title": "Temporada",
+      "description": "A Páscoa é uma das principais datas comemorativas e a procura por ovos de Páscoa é sempre alta, proporcionando uma boa oportunidade para vender."
+    },
+    {
+      "icon": "https://api.iconify.design/lucide:palette.svg",
+      "title": "Personalização",
+      "description": "Os ovos de Páscoa podem ser personalizados de acordo com as necessidades e gostos dos clientes, aumentando a satisfação e possibilidade de retorno."
+    },
+    {
+      "icon": "https://api.iconify.design/lucide:shopping-cart.svg",
+      "title": "Matéria-prima fácil de encontrar",
+      "description": "Os ingredientes para fazer os ovos de páscoa são fáceis de encontrar e de baixo custo."
+    },
+    {
+      "icon": "https://api.iconify.design/lucide:layers.svg",
+      "title": "Vários sabores e embalagens",
+      "description": "Os ovos de páscoa podem ser feitos com vários tipos de chocolates, recheios e embalagens, oferecendo diversas opções aos clientes."
+    }
+  ],
+  "bonuses": [
+    {
+      "title": "Como Vender no Ifood",
+      "description": "Nesse bônus vamos te mostrar o passo a passo simples para criar sua loja no Ifood e começar a vender diariamente.",
+      "image": "http://digitalmarketplaceworld.shop/wp-content/uploads/2024/01/download-3-1.png",
+      "originalPrice": 127,
+      "currentPrice": 0
+    },
+    {
+      "title": "Tipos de Embalagens",
+      "description": "Vamos te mostrar a melhor maneira de embalar seus ovos de páscoa, deixando eles ainda mais atrativos e encantadores.",
+      "image": "http://digitalmarketplaceworld.shop/wp-content/uploads/2024/01/images-_4_-_1_.jpg",
+      "originalPrice": 67,
+      "currentPrice": 0
+    },
+    {
+      "title": "Certificado de Conclusão de Curso",
+      "description": "Logo após adquirir o curso, você vai ter em mãos o certificado de conclusão, aumentando ainda mais a sua credibilidade no mercado.",
+      "image": "http://digitalmarketplaceworld.shop/wp-content/uploads/2024/01/download-_3_-_1_.jpg",
+      "originalPrice": 97,
+      "currentPrice": 0
+    },
+    {
+      "title": "Tipos de Chocolate",
+      "description": "Nesse bônus você vai aprender qual é o tipo de chocolate ideal para trabalhar, já que a porcentagem de cacau pode variar de acordo com as receitas.",
+      "image": "http://digitalmarketplaceworld.shop/wp-content/uploads/2024/01/download-_4_-_1_.jpeg",
+      "originalPrice": 127,
+      "currentPrice": 0
+    },
+    {
+      "title": "Como Conservar os Ovos",
+      "description": "Vamos te mostrar qual é a melhor maneira de armazenar os ovos de páscoa, para que ele nunca derreta e você não acabe rasgando dinheiro à toa.",
+      "image": "http://digitalmarketplaceworld.shop/wp-content/uploads/2024/01/images-_5_.jpg",
+      "originalPrice": 67,
+      "currentPrice": 0
+    },
+    {
+      "title": "Cones Trufados",
+      "description": "Nesse bônus, vamos te mostrar as receitas mais vendidas de cones trufados na páscoa, aumentando ainda mais o seu faturamento.",
+      "image": "http://digitalmarketplaceworld.shop/wp-content/uploads/2024/01/download-_5_-_1_.jpeg",
+      "originalPrice": 97,
+      "currentPrice": 0
+    }
+  ],
+  "testimonials": [
+    {
+      "quote": "Os petiscos são simplesmente maravilhosos! Meu cachorro adora e são super saudáveis!",
+      "author": "Maria Silva",
+      "role": "Cliente satisfeita",
+      "avatar": "http://digitalmarketplaceworld.shop/wp-content/uploads/2024/01/pv-1.png",
+      "image": "http://digitalmarketplaceworld.shop/wp-content/uploads/2024/01/pv-1.png"
+    },
+    {
+      "quote": "Comecei a vender os petiscos há 2 meses e já estou faturando mais de R$3.000 por mês!",
+      "author": "João Oliveira",
+      "role": "Empreendedor",
+      "avatar": "http://digitalmarketplaceworld.shop/wp-content/uploads/2024/01/pv-2.png",
+      "image": "http://digitalmarketplaceworld.shop/wp-content/uploads/2024/01/pv-2.png"
+    },
+    {
+      "quote": "As receitas são super fáceis de fazer e meu gato simplesmente adora!",
+      "author": "Ana Paula",
+      "role": "Tutora de gatos",
+      "avatar": "http://digitalmarketplaceworld.shop/wp-content/uploads/2024/01/pv-3.png",
+      "image": "http://digitalmarketplaceworld.shop/wp-content/uploads/2024/01/pv-3.png"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Como vou receber o produto?",
+      "answer": "Após concluir a compra, você recebe imediatamente no seu e-mail! Dessa forma, você vai poder acessar as receitas no seu celular, tablet ou computador."
+    },
+    {
+      "question": "Vai ter algum custo a mais?",
+      "answer": "Não, você pagará apenas uma vez e depois de fazer o download, vai ter acesso ao material sempre que quiser."
+    },
+    {
+      "question": "Vou receber o livro em casa?",
+      "answer": "Não, no momento não temos nenhum tipo de livro físico ou nenhum material físico para ser enviado pelos correios."
+    },
+    {
+      "question": "Vou ter alguma garantia?",
+      "answer": "Sim! Você vai ter 7 dias de garantia. Se por algum motivo o material não atingir as suas expectativas, vamos devolver todo seu dinheiro."
+    }
+  ],
+  "footer": {
+    "companyName": "Páscoa Lucrativa",
+    "copyright": "© 2024 Páscoa Lucrativa. Todos os direitos reservados.",
+    "backgroundColor": "#362118",
+    "textColor": "#FFFFFF"
+  },
+  "sections": [
+    { "type": "hero" },
+    { 
+      "type": "text", 
+      "content": "Nova tendência de Páscoa: ovos recheados fazem sucesso entre os consumidores. Descubra como tirar vantagem disso e faturar alto dentro da sua própria casa, mesmo que você não tenha nenhuma experiência.",
+      "textColor": "#FFFFFF",
+      "backgroundColor": "#362118"
+    },
+    { 
+      "type": "features",
+      "title": "QUAIS SÃO AS VANTAGENS DE VENDER OVOS DE PÁSCOA RECHEADOS?"
+    },
+    {
+      "type": "text",
+      "title": "QUAIS SÃO AS RECEITAS QUE VOCÊ VAI APRENDER NO CURSO?",
+      "content": "• Ovo de Páscoa recheado com brigadeiro\n• Ovo de Páscoa recheado com trufa de chocolate\n• Ovo de Páscoa recheado com nozes e caramelo\n• Ovo de Páscoa recheado com ganache de chocolate e morango\n• Ovo de Páscoa recheado com castanha de caju e mel\n• Ovo de Páscoa recheado com creme de avelã\n• Ovo de Páscoa recheado com chocolate branco e limão\n• Ovo de Páscoa recheado com creme de coco\n• Ovo de Páscoa recheado com chocolate amargo e gengibre\n• Ovo de Páscoa recheado com chocolate meio amargo e cravo\n• Ovo de Páscoa recheado com geleia de frutas vermelhas\n• Ovo de Páscoa recheado com chocolate e menta\n• Ovo de Páscoa recheado com creme de leite e baunilha\n• Ovo de Páscoa recheado com chocolate e amêndoas\n• Ovo de Páscoa recheado com chocolate e laranja",
+      "textColor": "#FFFFFF",
+      "backgroundColor": "#362118"
+    },
+    { 
+      "type": "button", 
+      "text": "EU QUERO AS RECEITAS",
+      "link": "#COMPRA"
+    },
+    {
+      "type": "testimonials",
+      "title": "VEJA O RESULTADO DE ALGUNS DOS NOSSOS ALUNOS",
+      "backgroundColor": "#362118",
+      "textColor": "#FFFFFF"
+    },
+    { 
+      "type": "button", 
+      "text": "EU TAMBÉM QUERO",
+      "link": "#COMPRA"
+    },
+    { 
+      "type": "bonuses",
+      "title": "COMPRANDO AINDA HOJE, VOCÊ VAI RECEBER MAIS DE R$300 EM BÔNUS EXCLUSIVOS:"
+    },
+    { 
+      "type": "button", 
+      "text": "EU QUERO TODOS OS BÔNUS",
+      "link": "#COMPRA"
+    },
+    { 
+      "type": "checkout",
+      "originalPrice": 297,
+      "price": 67,
+      "text": "EU QUERO O DESCONTO",
+      "link": "https://app.monetizze.com.br/checkout/KVJ282161"
+    },
+    { 
+      "type": "guarantee",
+      "text": "GARANTIA DE 7 DIAS",
+      "content": "Ciente da qualidade do conteúdo ministrado e com a finalidade de dar segurança às pessoas que queiram adquirir o curso, concedemos 7 dias de garantia, para que nossos alunos possam solicitar o reembolso de seu investimento, caso não estejam satisfeitos com sua compra.",
+      "days": 7,
+      "guaranteeImage": "http://digitalmarketplaceworld.shop/wp-content/uploads/2024/01/Selo-de-Garantia-de-7-Dias-PNG-Transparente-Sem-Fundo-1.png"
+    },
+    { 
+      "type": "faqs",
+      "title": "FAQ",
+      "textColor": "#F9C300"
+    },
+    {
+      "type": "footer"
+    }
+  ]
+}
