@@ -18,39 +18,61 @@ jobs:
       
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
-
+        
       - name: Login to Harbor Registry
         uses: docker/login-action@v2
         with:
-          registry: https://harbor.gambiarras.website
+          registry: harbor.gambiarras.website
           username: ${{ secrets.HARBORUSER }}
           password: ${{ secrets.HARBORPASS }}
       
-      # - name: Build and tag Docker image
-      #   id: docker_build
-      #   uses: docker/build-push-action@v4
-      #   with:
-      #     context: .
-      #     push: true
-      #     tags: harbor.gambiarras.website/automate/auto-landing-page:${{ github.run_number }}
-      #     load: true   
-      - name: Manual Docker Login and Push
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@v4
+        with:
+          images: harbor.gambiarras.website/automate/auto-landing-page
+          tags: |
+            type=raw,value=${{ github.run_number }}
+            type=ref,event=branch
+            type=ref,event=pr
+            type=sha,format=long
+      
+      - name: Build and push
+        id: docker_build
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          push: false
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          load: true
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+      
+      - name: Push Docker image with retry
         run: |
-          echo "${{ secrets.HARBORPASS }}" | docker login harbor.gambiarras.website -u "${{ secrets.HARBORUSER }}" --password-stdin
+          MAX_RETRIES=5
+          RETRY_COUNT=0
+          PUSH_SUCCESSFUL=false
           
-          # Construir a imagem localmente
-          docker build -t harbor.gambiarras.website/automate/auto-landing-page:${{ github.run_number }} .
-          
-          # Verificar se o login foi bem-sucedido
-          echo "Login status: $?"
-          
-          # Forçar o uso de HTTPS durante o push
-          export DOCKER_REGISTRY_SECURE=true
-          
-          cat ~/.docker/config.json
-
-          # Tentar o push com configuração explícita
-          docker push harbor.gambiarras.website/automate/auto-landing-page:${{ github.run_number }}         
+          while [ $RETRY_COUNT -lt $MAX_RETRIES ] && [ "$PUSH_SUCCESSFUL" = "false" ]; do
+            echo "Attempt $(($RETRY_COUNT + 1)) of $MAX_RETRIES to push image to Harbor..."
             
+            if docker push harbor.gambiarras.website/automate/auto-landing-page:${{ github.run_number }}; then
+              PUSH_SUCCESSFUL=true
+              echo "Push successful!"
+            else
+              RETRY_COUNT=$(($RETRY_COUNT + 1))
+              if [ $RETRY_COUNT -lt $MAX_RETRIES ]; then
+                WAIT_TIME=$((30 * $RETRY_COUNT))
+                echo "Push failed. Retrying in $WAIT_TIME seconds..."
+                sleep $WAIT_TIME
+              else
+                echo "All $MAX_RETRIES attempts failed."
+                exit 1
+              fi
+            fi
+          done
+          
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
