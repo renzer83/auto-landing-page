@@ -47,6 +47,8 @@ jobs:
           # Forçar o uso de HTTPS durante o push
           export DOCKER_REGISTRY_SECURE=true
           
+          cat ~/.docker/config.json
+
           # Tentar o push com configuração explícita
           docker push harbor.gambiarras.website/automate/auto-landing-page:${{ github.run_number }}         
             
