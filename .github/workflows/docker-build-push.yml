@@ -26,14 +26,29 @@ jobs:
           username: ${{ secrets.HARBORUSER }}
           password: ${{ secrets.HARBORPASS }}
       
-      - name: Build and tag Docker image
-        id: docker_build
-        uses: docker/build-push-action@v4
-        with:
-          context: .
-          push: true
-          tags: harbor.gambiarras.website/automate/auto-landing-page:${{ github.run_number }}
-          load: true      
+      # - name: Build and tag Docker image
+      #   id: docker_build
+      #   uses: docker/build-push-action@v4
+      #   with:
+      #     context: .
+      #     push: true
+      #     tags: harbor.gambiarras.website/automate/auto-landing-page:${{ github.run_number }}
+      #     load: true   
+      - name: Manual Docker Login and Push
+        run: |
+          echo "${{ secrets.HARBORPASS }}" | docker login harbor.gambiarras.website -u "${{ secrets.HARBORUSER }}" --password-stdin
           
+          # Construir a imagem localmente
+          docker build -t harbor.gambiarras.website/automate/auto-landing-page:${{ github.run_number }} .
+          
+          # Verificar se o login foi bem-sucedido
+          echo "Login status: $?"
+          
+          # Forçar o uso de HTTPS durante o push
+          export DOCKER_REGISTRY_SECURE=true
+          
+          # Tentar o push com configuração explícita
+          docker push harbor.gambiarras.website/automate/auto-landing-page:${{ github.run_number }}         
+            
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
