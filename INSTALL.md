@@ -76,3 +76,10 @@ O sistema suporta múltiplos templates. Acesse-os alterando o parâmetro na URL:
 - http://localhost:5173/landing/powerpet
 - http://localhost:5173/landing/protein
 - http://localhost:5173/landing/digital-marketing
+
+
+# Create and use a builder that supports multi-platform builds
+docker buildx create --name mybuilder --use
+
+# Build using buildx
+docker buildx build --platform linux/amd64 -t auto-landing-page:v1 --load .
