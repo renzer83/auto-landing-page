@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  auto-landing-page:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    # Para desenvolvimento, você pode descomentar estas linhas para montar volumes
+    # volumes:
+    #   - ./src:/app/src
+    #   - ./public:/app/public
