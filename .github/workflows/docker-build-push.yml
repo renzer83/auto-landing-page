@@ -22,7 +22,7 @@ jobs:
       - name: Login to Harbor Registry
         uses: docker/login-action@v2
         with:
-          registry: harbor.gambiarras.website
+          registry: https://harbor.gambiarras.website
           username: ${{ secrets.HARBORUSER }}
           password: ${{ secrets.HARBORPASS }}
       
@@ -32,7 +32,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: harbor.gambiarras.website/automate/auto-landing-page:${{ github.run_number }}
+          tags: https://harbor.gambiarras.website/automate/auto-landing-page:${{ github.run_number }}
           load: true      
           
       - name: Image digest
