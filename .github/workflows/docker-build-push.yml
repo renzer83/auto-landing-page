@@ -24,12 +24,12 @@ jobs:
       
       - name: Login to Harbor Registry with Podman
         run: |
-          podman login harbor.gambiarras.website -u ${{ secrets.HARBORUSER }} -p ${{ secrets.HARBORPASS }}
+          podman login npx.finditbuy.com -u ${{ secrets.HARBORUSER }} -p ${{ secrets.HARBORPASS }}
       
       - name: Build image with Podman
         run: |
-          podman build ./ -t harbor.gambiarras.website/automate/auto-landing-page:latest
+          podman build ./ -t npx.finditbuy.com/automate/auto-landing-page:latest
       
       - name: Push image with Podman
         run: |
-          podman push harbor.gambiarras.website/automate/auto-landing-page:latest
+          podman push npx.finditbuy.com/automate/auto-landing-page:latest
