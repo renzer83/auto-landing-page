@@ -32,10 +32,7 @@ jobs:
         with:
           images: harbor.gambiarras.website/automate/auto-landing-page
           tags: |
-            type=raw,value=${{ github.run_number }}
-            type=ref,event=branch
-            type=ref,event=pr
-            type=sha,format=long
+            type=raw,value=latest
       
       - name: Build and push
         id: docker_build
@@ -58,7 +55,7 @@ jobs:
           while [ $RETRY_COUNT -lt $MAX_RETRIES ] && [ "$PUSH_SUCCESSFUL" = "false" ]; do
             echo "Attempt $(($RETRY_COUNT + 1)) of $MAX_RETRIES to push image to Harbor..."
             
-            if docker push harbor.gambiarras.website/automate/auto-landing-page:${{ github.run_number }}; then
+            if docker push harbor.gambiarras.website/automate/auto-landing-page:latest; then
               PUSH_SUCCESSFUL=true
               echo "Push successful!"
             else
