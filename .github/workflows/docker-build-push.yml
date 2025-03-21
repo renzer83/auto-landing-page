@@ -24,8 +24,8 @@ jobs:
       
       - name: Login to Harbor Registry with Podman
         run: |
-          podman login npx.finditbuy.com -u ${{ secrets.HARBORUSER }} -p ${{ secrets.HARBORPASS }}
-      
+          echo "${{ secrets.HARBORPASS }}" | podman login npx.finditbuy.com -u ${{ secrets.HARBORUSER }} --password-stdin
+                  
       - name: Build image with Podman
         run: |
           podman build ./ -t npx.finditbuy.com/automate/auto-landing-page:latest
