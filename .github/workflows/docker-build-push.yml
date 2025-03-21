@@ -34,42 +34,47 @@ jobs:
           tags: |
             type=raw,value=latest
       
-      - name: Build and push
-        id: docker_build
-        uses: docker/build-push-action@v4
-        with:
-          context: .
-          push: false
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
-          load: true
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
-      
-      - name: Push Docker image with retry
+      - uses: actions/checkout@v3
+      - name: BuildAndPushImageOnHarbor
         run: |
-          MAX_RETRIES=5
-          RETRY_COUNT=0
-          PUSH_SUCCESSFUL=false
+          docker build ./ -t harbor.gambiarras.website/automate/auto-landing-page:${{ github.run_number }}
+          docker push harbor.gambiarras.website/automate/auto-landing-page:${{ github.run_number }}      
+      # - name: Build and push
+      #   id: docker_build
+      #   uses: docker/build-push-action@v4
+      #   with:
+      #     context: .
+      #     push: false
+      #     tags: ${{ steps.meta.outputs.tags }}
+      #     labels: ${{ steps.meta.outputs.labels }}
+      #     load: true
+      #     cache-from: type=gha
+      #     cache-to: type=gha,mode=max
+      
+      # - name: Push Docker image with retry
+      #   run: |
+      #     MAX_RETRIES=5
+      #     RETRY_COUNT=0
+      #     PUSH_SUCCESSFUL=false
           
-          while [ $RETRY_COUNT -lt $MAX_RETRIES ] && [ "$PUSH_SUCCESSFUL" = "false" ]; do
-            echo "Attempt $(($RETRY_COUNT + 1)) of $MAX_RETRIES to push image to Harbor..."
+      #     while [ $RETRY_COUNT -lt $MAX_RETRIES ] && [ "$PUSH_SUCCESSFUL" = "false" ]; do
+      #       echo "Attempt $(($RETRY_COUNT + 1)) of $MAX_RETRIES to push image to Harbor..."
             
-            if docker push harbor.gambiarras.website/automate/auto-landing-page:latest; then
-              PUSH_SUCCESSFUL=true
-              echo "Push successful!"
-            else
-              RETRY_COUNT=$(($RETRY_COUNT + 1))
-              if [ $RETRY_COUNT -lt $MAX_RETRIES ]; then
-                WAIT_TIME=$((30 * $RETRY_COUNT))
-                echo "Push failed. Retrying in $WAIT_TIME seconds..."
-                sleep $WAIT_TIME
-              else
-                echo "All $MAX_RETRIES attempts failed."
-                exit 1
-              fi
-            fi
-          done
+      #       if docker push harbor.gambiarras.website/automate/auto-landing-page:latest; then
+      #         PUSH_SUCCESSFUL=true
+      #         echo "Push successful!"
+      #       else
+      #         RETRY_COUNT=$(($RETRY_COUNT + 1))
+      #         if [ $RETRY_COUNT -lt $MAX_RETRIES ]; then
+      #           WAIT_TIME=$((30 * $RETRY_COUNT))
+      #           echo "Push failed. Retrying in $WAIT_TIME seconds..."
+      #           sleep $WAIT_TIME
+      #         else
+      #           echo "All $MAX_RETRIES attempts failed."
+      #           exit 1
+      #         fi
+      #       fi
+      #     done
           
-      - name: Image digest
-        run: echo ${{ steps.docker_build.outputs.digest }}
+      # - name: Image digest
+      #   run: echo ${{ steps.docker_build.outputs.digest }}
