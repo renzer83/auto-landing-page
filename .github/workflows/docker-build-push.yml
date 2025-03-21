@@ -22,12 +22,6 @@ jobs:
           sudo apt-get install -y podman
           podman --version
       
-      - name: Set up Podman config for insecure registry
-        run: |
-          sudo mkdir -p /etc/containers/registries.conf.d/
-          echo '[registries.insecure]
-          registries = ["harbor.gambiarras.website"]' | sudo tee /etc/containers/registries.conf.d/insecure.conf
-      
       - name: Login to Harbor Registry with Podman
         run: |
           podman login harbor.gambiarras.website -u ${{ secrets.HARBORUSER }} -p ${{ secrets.HARBORPASS }}
