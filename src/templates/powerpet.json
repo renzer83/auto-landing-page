@@ -287,12 +287,12 @@
     },
     { 
       "type": "checkout",
-      "originalPrice": 147,
-      "price": 97,
+      "originalPrice": 35,
+      "price": 20,
       "text": "🐾 QUERO ADQUIRIR AGORA MESMO! 🐾",
-      "link": "http://mon.net.br/276gh6?src=Allan",
-      "installments": "ou até 12x de R$8,08 no cartão de crédito",
-      "paymentMethods": ["Cartão de crédito", "Boleto", "Pix"],
+      "link": "https://app.monetizze.com.br/checkout/DWT336698",
+      "installments": "ou até 2x de R$10,45 no cartão de crédito",
+      "paymentMethods": ["Cartão de crédito", "Pix", "Paypal"],
       "securityBadgeUrl": "https://api.finditbuy.com/api/images/pub?filename=powerpet/compra-segura-2-300x28-1.webp"
     },
     { 
