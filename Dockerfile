@@ -1,4 +1,4 @@
-FROM node:18-alpine
+FROM node:18-alpine AS builder
 
 # Definir diretório de trabalho
 WORKDIR /app
@@ -40,9 +40,9 @@ RUN ls -la dist/
 FROM nginx:alpine
 
 # Copiar os arquivos de build para o diretório do nginx
-COPY --from=0 /app/dist /usr/share/nginx/html
+COPY --from=builder /app/dist /usr/share/nginx/html
 
-# Copiar configuração personalizada do nginx
+# Copiar configurações personalizadas do nginx
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Verificar arquivos copiados

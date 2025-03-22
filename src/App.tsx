@@ -52,7 +52,7 @@ function App() {
     <ErrorBoundary>
       <Router>
         <Routes>
-          <Route path="/landing/:id" element={<LandingPage />} />
+          <Route path="/product/:id" element={<LandingPage />} />
           <Route path="/" element={<LandingPage />} />
         </Routes>
       </Router>
