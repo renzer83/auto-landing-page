@@ -1,4 +1,5 @@
 import React from 'react';
+import { trackPurchaseConversion, trackClickEvent } from '../../utils/tracking/conversionTracking';
 
 interface CheckoutSectionProps {
   productName: string;
@@ -24,6 +25,14 @@ export const checkoutTemplate = {
 };
 
 export const CheckoutSection: React.FC<CheckoutSectionProps> = (props) => {
+  // Função para registrar a conversão de compra
+  const handlePurchaseConversion = (price: number, buttonText: string) => {
+    // Registrar evento de clique
+    trackClickEvent('checkout-button', buttonText);
+    
+    // Registrar evento de conversão
+    trackPurchaseConversion(price);
+  };
   // Usar valores do template para campos não definidos
   const {
     productName,
@@ -59,6 +68,7 @@ export const CheckoutSection: React.FC<CheckoutSectionProps> = (props) => {
           <a 
             href={buttonLink}
             className="block w-full max-w-md mx-auto bg-primary hover:bg-primary/80 text-black font-bold py-5 px-8 rounded-full text-center text-2xl transform transition-all hover:scale-105 mb-8 animate-pulse shadow-lg shadow-primary/30"
+            onClick={() => handlePurchaseConversion(price, buttonText)}
           >
             {buttonText}
           </a>
